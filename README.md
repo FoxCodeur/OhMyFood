@@ -4,7 +4,7 @@ projet n°4 du cursus d'intégrateur
 1. Initialisation du projet ohMyFood
     Initialiser un projet Node.js
     Ouvre un terminal dans ton dossier de projet et exécute la commande suivante: 
-Voici un tableau comparatif des commandes `npm init` et `npm init -y` :
+`npm init` ou `npm init -y` :
 
 | Commande      | Description |---------------|--------------------------------------------------------------------------------|
 | `npm init`    | Lance un guide interactif pour personnaliser le fichier `package.json`.        |
@@ -13,10 +13,9 @@ Voici un tableau comparatif des commandes `npm init` et `npm init -y` :
     Installe Sass comme dépendance de ton projet :
     npm install --save-dev sass
     
-2. arborescence du projet
+2. l'arborescence
 
-    Voici la structure du projet :
-# Structure du projet OhMyFood
+# OhMyFood
 
 | Dossier/Fichier             | Description                                                        |
 |-----------------------------|-------------------------------------------------------------------------------|
@@ -74,16 +73,14 @@ des styles, typographie, composants, etc.).
 
 4. Créer un script de compilation Sass
 
-Maintenant, tu peux configurer un script dans ton fichier package.json pour que Sass compile automatiquement tes fichiers SCSS en CSS chaque fois qu'il y a une modification.
-Ajouter un script de compilation Sass
-
+Maintenant, il faut configurer un script dans ton fichier package.json pour que Sass compile automatiquement les fichiers SCSS en CSS chaque fois qu'il y a une modification.
 Dans le fichier package.json, ajoute ce script pour activer la commande sass --watch :
 
 "scripts": {
-  "sass:watch": "sass --watch sass/main.scss:assets/css/style.css"
+  "sass:watch": "sass --watch sass/main.scss:assets/css/main.css"
 }
 
-Ce script compile sass/main.scss vers assets/css/style.css à chaque fois que tu effectues une modification.
+Ce script compile sass/main.scss vers assets/css/main.css à chaque fois que tu effectues une modification.
 
 5. Exécuter Sass en mode "watch"
 
@@ -105,6 +102,6 @@ Dans ton index.html, ajoute la balise <link> pour inclure le fichier style.css :
 
 7. Vérification
 
-Maintenant, si tu modifies des fichiers SCSS, par exemple _home.scss dans le dossier sass/pages/, ils devraient être automatiquement compilés et appliqués sur ton site.
+Maintenant, si tu modifies des fichiers SCSS, par exemple _home.scss dans le dossier sass/pages/, ils devraient être automatiquement compilés et appliqués sur le navigateur.
 
 -------------------------------------------------------------------------------
