@@ -54,7 +54,7 @@ projet n°4 du cursus d'intégrateur
 | ├── `package-lock.json`     | les vers des dépendances                       |
 | └── `README.md`             | Documentation du projet                        |
 
-3. Configuration de Sass
+3. Configuration du préprocesseur Sass
 
     Dans ce projet, tu vas organiser ton code Sass de manière modulaire, avec
 plusieurs fichiers partiels pour différents aspects du site (réinitialisation 
@@ -104,4 +104,5 @@ Dans ton index.html, ajoute la balise <link> pour inclure le fichier style.css :
 
 Maintenant, si tu modifies des fichiers SCSS, par exemple _home.scss dans le dossier sass/pages/, ils devraient être automatiquement compilés et appliqués sur le navigateur.
 
--------------------------------------------------------------------------------
+8. Maintenant que l'arborescence a été créé tu peux copier les deux dossiers images logo et restaurants dans asset/images.
+----------------------------------------------------------------------------- 
