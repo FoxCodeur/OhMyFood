@@ -117,3 +117,4 @@ Ensuite, créez la branche develop et basculez dessus :
 2. Créer la branche variables à partir de develop :
 Maintenant que vous êtes sur la branche develop, vous pouvez créer la branche variables :
     git checkout -b variables
+    
