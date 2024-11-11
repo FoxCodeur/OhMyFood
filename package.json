@@ -1,0 +1,30 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "projet n°4 du cursus d'intégrateur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/FoxCodeur/OhMyFood.git"
+  },
+  "keywords": [
+    "(html",
+    "css",
+    "sass",
+    "restaurant",
+    "food",
+    "responsive)"
+  ],
+  "author": "Jean-Luc Detcherry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FoxCodeur/OhMyFood/issues"
+  },
+  "homepage": "https://github.com/FoxCodeur/OhMyFood#readme",
+  "devDependencies": {
+    "sass": "^1.80.6"
+  }
+}
