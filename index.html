@@ -25,7 +25,125 @@
 
 
 <body>
-    <h2>Structure de base</h2>
+    <header class="header">
+        <div class="header__logo">
+            <img src="assets/images/logo.png" alt="Logo OhMyFood">
+        </div>
+    </header>
+
+    <main class="middle-content">
+        <!-- Section pour la localisation -->
+        <section class="location">
+            <div class="location__icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <p class="location__city">Paris, Belleville</p>
+        </section>
+
+        <!-- Section pour le titre, sous-titre et lien -->
+        <section class="intro">
+            <div class="intro__container">
+                <h1 class="intro__title">Réservez le menu qui vous convient</h1>
+                <p class="intro__subtitle">Découvrez des restaurants</p>
+                <div class="intro__button-container">
+                    <a class="intro__button" href="#restaurants">Explorer nos restaurants</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Steps -->
+        <section class="steps">
+            <h2 class="steps__title">Fonctionnement</h2>
+            <div class="steps__steps">
+                <div class="steps__step">
+                    <div class="steps__step-number">1</div>
+                    <p class="steps__step-text">Choisissez un restaurant</p>
+                </div>
+                <div class="steps__step">
+                    <div class="steps__step-number">2</div>
+                    <p class="steps__step-text">Créez votre menu</p>
+                </div>
+                <div class="steps__step">
+                    <div class="steps__step-number">3</div>
+                    <p class="steps__step-text">Dégustez au restaurant</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Restaurants -->
+        <section id="restaurants" class="restaurants">
+            <h2 class="restaurants__title">Restaurants</h2>
+            <div class="restaurants__list">
+                <div class="restaurants__group">
+                    <!-- Carte Restaurant 1 -->
+                    <article class="restaurants__card">
+                        <a href="restaurant1.html" class="restaurants__link">
+                            <img src="path/to/restaurant1.jpg" alt="Restaurant 1" class="restaurants__image">
+                            <div class="restaurants__info">
+                                <h3 class="restaurants__name">La palette du goût</h3>
+                                <i class="restaurants__heart-icon fas fa-heart"></i>
+                                <p class="restaurants__location">Ménilmontant</p>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Carte Restaurant 2 -->
+                    <article class="restaurants__card">
+                        <a href="restaurant2.html" class="restaurants__link">
+                            <img src="path/to/restaurant2.jpg" alt="Restaurant 2" class="restaurants__image">
+                            <div class="restaurants__info">
+                                <h3 class="restaurants__name">La note enchantée</h3>
+                                <i class="restaurants__heart-icon fas fa-heart"></i>
+                                <p class="restaurants__location">Charonne</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <div class="restaurants__group">
+                    <!-- Carte Restaurant 3 -->
+                    <article class="restaurants__card">
+                        <a href="restaurant3.html" class="restaurants__link">
+                            <img src="path/to/restaurant3.jpg" alt="Restaurant 3" class="restaurants__image">
+                            <div class="restaurants__info">
+                                <h3 class="restaurants__name">A la française</h3>
+                                <i class="restaurants__heart-icon fas fa-heart"></i>
+                                <p class="restaurants__location">Cité Rouge</p>
+                            </div>
+                        </a>
+                    </article>
+                    <!-- Carte Restaurant 4 -->
+                    <article class="restaurants__card">
+                        <a href="restaurant4.html" class="restaurants__link">
+                            <img src="path/to/restaurant4.jpg" alt="Restaurant 4" class="restaurants__image">
+                            <div class="restaurants__info">
+                                <h3 class="restaurants__name">Le délice des sens</h3>
+                                <i class="restaurants__heart-icon fas fa-heart"></i>
+                                <p class="restaurants__location">Folie-Méricourt</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Logo Footer -->
+        <div class="footer-logo">
+            <img src="path/to/logo.png" alt="Logo OhMyFood">
+        </div>
+
+        <!-- Liste des liens Footer -->
+        <ul class="footer-links">
+            <li><a href="#">Proposer un restaurant</a></li>
+            <li class="partenaire-link">
+                <i class="fa-solid fa-handshake"></i>
+                <a href="#">Devenir partenaire</a>
+            </li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 
 </html>
