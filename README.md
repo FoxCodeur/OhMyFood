@@ -69,8 +69,7 @@ des styles, typographie, composants, etc.).
     @use "pages/home";
     @use "utils/functions";
     @use "utils/mixins";
-    @use "utils/variables as v";
-        L'utilisation d'un alias pour les variables en Sass permet de mieux organiser et éviter les conflits de noms, surtout lorsque plusieurs fichiers importent des variables. Cela rend le code plus clair en indiquant explicitement d'où proviennent les variables et facilite leur gestion dans des projets complexes.
+    @use "utils/variables";
 
 4. Créer un script de compilation Sass
 
@@ -106,15 +105,6 @@ Dans ton index.html, ajoute la balise <link> pour inclure le fichier style.css :
 Maintenant, si tu modifies des fichiers SCSS, par exemple _home.scss dans le dossier sass/pages/, ils devraient être automatiquement compilés et appliqués sur le navigateur.
 
 8. Maintenant que l'arborescence a été créé tu peux copier les deux dossiers images logo et restaurants dans asset/images.
------------------------------------------------------------------------------ 
 
-Gérer les branches dans le projet
-1. Créer la branche develop à partir de main :
-Dans votre terminal, assurez-vous d'être sur la branche main (si ce n'est pas déjà fait) :
-    git checkout main
-Ensuite, créez la branche develop et basculez dessus :
-    git checkout -b develop
-2. Créer la branche variables à partir de develop :
-Maintenant que vous êtes sur la branche develop, vous pouvez créer la branche variables :
-    git checkout -b variables
-    
+----------------------------------------------------------------------------- 
+9. intégration de la librairie fontawesome et ajout des deux font family, Shrikhand et Roboto. 
