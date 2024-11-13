@@ -1,10 +1,12 @@
-@use "base/_reset";
-@use "base/typographie";
-@use "components/navigation";
-@use "layout/header";
-@use "layout/footer";
-@use "layout/forms";
-@use "pages/home";
-@use "utils/functions";
-@use "utils/mixins";
-@use "utils/variables";
+// Variables en haut
+@use "./utils/variables"; // Les variables doivent être importées avant d'être utilisées
+// Autres imports
+@use "./base/reset";
+@use "./base/typographie";
+@use "./components/navigation";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/forms";
+@use "./pages/home";
+@use "./utils/functions";
+@use "./utils/mixins";
