@@ -156,31 +156,37 @@ img {
 .xxl-font {
   font-size: 1.5rem;
   font-weight: 700;
-  line-height: 1.75rem;
+  line-height: 28.13px;
 }
 
 .xl-font {
   font-size: 1.125rem;
   font-weight: 700;
-  line-height: 1.3125rem;
+  line-height: 21.09px;
+}
+
+.xl-font-light {
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 21.09px;
 }
 
 .lg-font {
   font-size: 1.062rem;
   font-weight: 300;
-  line-height: 1.25rem;
+  line-height: 19.92px;
 }
 
 .md-font {
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.1875rem;
+  line-height: 18.75px;
 }
 
 .sm-font {
   font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.0625rem;
+  line-height: 16.62px;
 }
 
 /*# sourceMappingURL=main.css.map */
