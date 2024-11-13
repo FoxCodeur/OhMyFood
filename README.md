@@ -108,3 +108,48 @@ Maintenant, si tu modifies des fichiers SCSS, par exemple _home.scss dans le dos
 
 ----------------------------------------------------------------------------- 
 9. intégration de la librairie fontawesome et ajout des deux font family, Shrikhand et Roboto. 
+----------------------------------------------------------------------------
+10. Implémentation de la page d'accueil "OhMyFood"
+Structure du fichier index.html
+
+Le fichier HTML de la page d'accueil est organisé de manière à favoriser une navigation claire et un design responsive, en suivant une approche mobile-first. Voici la structure principale de ce fichier :
+
+    <header> :
+        Contient le logo de l'application, placé dans un div avec la classe .header__logo.
+
+    <main> :
+        Composé de plusieurs sections qui structurent le contenu de la page d'accueil.
+
+    Sections principales :
+        <section class="location"> : Affiche un icône et la localisation actuelle.
+        <section class="intro"> : Contient le titre principal, un sous-titre et un bouton pour explorer les restaurants.
+        <section class="steps"> : Décrit le processus en trois étapes, avec des informations claires sur comment utiliser le service.
+        <section class="restaurants"> : Affiche une liste de restaurants sous forme de cartes cliquables.
+
+    <footer> :
+        Contient le logo de l'application et une liste de liens de navigation, dont des liens vers des pages comme "Proposer un restaurant", "Mentions légales", etc.
+
+Élément ajouté dans le <head>
+
+Dans la section <head> du fichier, plusieurs éléments ont été ajoutés pour optimiser le chargement des ressources et garantir un affichage cohérent sur tous les appareils : 
+<!-- Préconnexion pour optimiser le chargement des polices Google -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Polices Google : Shrikhand et Roboto -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+<!-- Font Awesome pour les icônes -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- Lien vers le fichier CSS compilé -->
+<link rel="stylesheet" href="assets/css/main.css">
+
+Application du style sur le fichier index.html !
+    Tout d'abord, il est nécessaire de créer des variables pour définir les différentes tailles de police utilisées sur le site. Ensuite, il faut définir les styles typographiques pour chaque balise impliqué dans des modifications, tels que les titres, les sous-titres et les paragraphes.
+
+Pour chaque niveau de titre et de paragraphe dans le fichier HTML, vous appliquerez les classes appropriées afin d'associer les polices et tailles de texte définies. Cela permet de garantir une typographie cohérente et bien structurée sur l'ensemble du site.  

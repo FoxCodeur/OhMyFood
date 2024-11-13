@@ -1,31 +1,32 @@
-/* classe commune pour les styles de polices */
+// _typographie.scss
+@use "../utils/variables" as variables;
+
 .xxl-font {
-  font-size: $font-xxl; // 24px
+  font-size: variables.$font-xxl; // 1.5rem (24px)
   font-weight: 700;
-  line-height: 28.13px;
+  line-height: 1.75rem; // 28px
 }
 
 .xl-font {
-  font-size: $font-xl; // 18px
+  font-size: variables.$font-xl; // 1.125rem (18px)
   font-weight: 700;
-  line-height: 21.09px;
+  line-height: 1.3125rem; // 21.09px
 }
 
 .lg-font {
-  font-size: $font-lg; // 17px
+  font-size: variables.$font-lg; // 1.062rem (17px)
   font-weight: 300;
-  line-height: 19.92px;
+  line-height: 1.25rem; // 19.92px
 }
+
 .md-font {
-  font-size: $font-md; // 16px
+  font-size: variables.$font-md; // 1rem (16px)
   font-weight: 500;
-  line-height: 18.75px;
+  line-height: 1.1875rem; // 18.75px
 }
+
 .sm-font {
-  font-size: $font-sm; // 14px
+  font-size: variables.$font-sm; // 0.875rem (14px)
   font-weight: 500;
-  line-height: 16.62px;
-}
-body {
-  background-color: antiquewhite;
+  line-height: 1.0625rem; // 16.62px
 }
