@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -99,28 +98,21 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-=======
-/* Error: The default namespace "variables as v" is not a valid Sass identifier.
- * 
- * Recommendation: add an "as" clause to define an explicit namespace.
- *    ,
- * 10 | @use "utils/variables as v";
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   sass\main.scss 10:1  root stylesheet */
->>>>>>> 3d95c46 (Save local changes to main.css)
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: The default namespace "variables as v" is not a valid Sass identifier.\a\aRecommendation: add an "as" clause to define an explicit namespace.\a    \2577 \a 10 \2502  @use "utils/variables as v";\d\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   sass\\main.scss 10:1  root stylesheet';
 }
-<<<<<<< HEAD
 
 body {
   line-height: 1;
@@ -166,5 +158,3 @@ h2 {
 }
 
 /*# sourceMappingURL=main.css.map */
-=======
->>>>>>> 3d95c46 (Save local changes to main.css)
