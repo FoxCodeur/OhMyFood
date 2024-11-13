@@ -1,0 +1,15 @@
+// La charte graphique
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(147, 86, 220, 1) 100%
+);
+// Les différentes font size
+$font-xxl: 1.5rem; // 24px
+$font-xl: 1.125rem; // 18px
+$font-lg: 1.062rem; // 17px
+$font-md: 1rem; // 16px
+$font-sm: 0.875rem; // 14px
