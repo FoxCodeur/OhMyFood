@@ -161,3 +161,4 @@ On nous a donné des informations à propos des polices utilisés sur le site et
 J'ai crée deux variables:
     $font-logo: 'Shrikhand', cursive;
     $font-text: 'Roboto', sans-serif;
+Ensuite on crée les mixins qui utilisent flexbox et on les appliquent sur toute la page d'accueil. 

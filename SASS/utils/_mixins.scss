@@ -1,7 +1,7 @@
 // ==============================
 // FLEXBOX MIXINS
 // ==============================
-
+@use "../utils/variables" as *;
 @mixin flex {
   display: flex;
 }
@@ -88,4 +88,20 @@
 @mixin flex-nowrap {
   display: flex;
   flex-wrap: nowrap;
+}
+// ==============================
+// BUTTON MIXINS
+@mixin button-style {
+  opacity: 1;
+  width: 335px;
+  height: 72.38px;
+  border-radius: 20px;
+  background-color: $color-background;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  // 0 : L'ombre est décalée horizontalement de 0 pixels (aucun décalage sur l'axe X).
+  // 4px : L'ombre est décalée verticalement de 4 pixels.
+  // 15px : Le rayon de flou de l'ombre est de 15 pixels, ce qui donne un effet de diffusion.
+  // 0 : pas d'étalement de l'ombre.
+  // rgba(0, 0, 0, 0.15) : La couleur de l'ombre est noire avec une opacité de 0.15 (ce qui correspond à #00000026 en hexadécimal). Le dernier chiffre, 0.15, représente l'alpha (opacité).
+  padding: 0 20px;
 }

@@ -31,5 +31,12 @@
         }
       }
     }
+    .steps {
+      .step__container {
+        .step__item {
+          @include button-style;
+        }
+      }
+    }
   }
 }

@@ -241,5 +241,14 @@ img {
 .main-container .middle-content .intro .intro__container .intro__button-container {
   width: 190px;
 }
+.main-container .middle-content .steps .step__container .step__item {
+  opacity: 1;
+  width: 335px;
+  height: 72.38px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  padding: 0 20px;
+}
 
 /*# sourceMappingURL=main.css.map */
