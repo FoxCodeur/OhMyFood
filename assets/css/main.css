@@ -194,104 +194,16 @@ img {
   line-height: 16.62px;
 }
 
-.flex {
-  display: flex;
-}
-
-.flex-align-center {
-  display: flex;
-  align-items: center;
-}
-
-.flex-justify-center {
-  display: flex;
-  justify-content: center;
-}
-
-.flex-center {
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 63px;
 }
-
-.flex-column {
+.header .header__link {
   display: flex;
-  flex-direction: column;
-}
-
-.flex-column-center {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-.flex-column-between {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.flex-align-start {
-  display: flex;
-  align-items: flex-start;
-}
-
-.flex-align-end {
-  display: flex;
-  align-items: flex-end;
-}
-
-.flex-justify-start {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.flex-justify-end {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.flex-around {
-  display: flex;
-  justify-content: space-around;
-}
-
-.flex-evenly {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.header .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(100%);
-  border: 0;
-  white-space: nowrap;
 }
 
 .main-container {
@@ -300,6 +212,34 @@ img {
 }
 .main-container .middle-content {
   width: 100%;
+}
+.main-container .middle-content .location {
+  height: 50px;
+  background-color: #eaeaea;
+}
+.main-container .middle-content .location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-container .middle-content .intro .intro__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 190px;
+  border: 1px solid yellow;
+}
+.main-container .middle-content .intro .intro__container .intro__title {
+  padding: 0 10px 8px 10px;
+  width: 275px;
+}
+.main-container .middle-content .intro .intro__container .intro__subtitle {
+  width: 315px;
+}
+.main-container .middle-content .intro .intro__container .intro__button-container {
+  width: 190px;
 }
 
 /*# sourceMappingURL=main.css.map */

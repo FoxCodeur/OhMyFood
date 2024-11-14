@@ -27,7 +27,7 @@
 <body>
     <div class="main-container">
         <header class="header">
-            <a href="index.html">
+            <a href="index.html" class="header__link">
                 <h1 class="header__logo xxl-font main-title">OhMyFood</h1>
             </a>
         </header>
@@ -35,7 +35,7 @@
 
         <main class="middle-content">
             <!-- Section pour la localisation -->
-            <section class="location flex-center">
+            <section class="location">
                 <div class="location__icon">
                     <i class="fas fa-map-marker-alt"></i>
                 </div>
@@ -46,34 +46,46 @@
             <section class="intro">
                 <div class="intro__container">
                     <h2 class="intro__title xxl-font">Réservez le menu qui vous convient</h2>
-                    <p class="intro__subtitle xl-font-light">Découvrez des restaurants</p>
+                    <p class="intro__subtitle xl-font-light">Découvrez des restaurants d'exception, sélectionnés par nos
+                        soins.</p>
                     <div class="intro__button-container">
                         <a class="intro__button md-font" href="#restaurants">Explorer nos restaurants</a>
                     </div>
                 </div>
             </section>
 
-            <!-- Section Steps -->
-            <section class="steps">
-                <h2 class="steps__title xxl-font">Fonctionnement</h2>
-                <div class="steps__steps">
-                    <div class="steps__step">
-                        <div class="steps__step-number"><span class="sm-font">1</span></div>
+            <!-- Section les étapes pour commander un menu -->
+            <div class="steps__container">
+                <div class="steps__step">
+                    <div class="steps__step-header">
+                        <div class="steps__step-number">
+                            <span class="sm-font">1</span>
+                        </div>
                         <p class="steps__step-text md-font">Choisissez un restaurant</p>
                     </div>
-                    <div class="steps__step">
-                        <div class="steps__step-number"><span class="sm-font">2</span></div>
+                </div>
+                <div class="steps__step">
+                    <div class="steps__step-header">
+                        <div class="steps__step-number">
+                            <span class="sm-font">2</span>
+                        </div>
                         <p class="steps__step-text md-font">Créez votre menu</p>
                     </div>
-                    <div class="steps__step">
-                        <div class="steps__step-number"><span class="sm-font">3</span></div>
+                </div>
+                <div class="steps__step">
+                    <div class="steps__step-header">
+                        <div class="steps__step-number">
+                            <span class="sm-font">3</span>
+                        </div>
                         <div class="steps__step-content">
                             <i class="steps__step-icon fas fa-store"></i>
                             <p class="steps__step-text md-font">Dégustez au restaurant</p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+
 
             <!-- Section Restaurants -->
             <section id="restaurants" class="restaurants">

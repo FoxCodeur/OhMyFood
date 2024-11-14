@@ -1,7 +1,35 @@
+@use "../utils/mixins" as *;
 .main-container {
   width: 375px;
   margin: 0 auto;
+
   .middle-content {
     width: 100%;
+    .location {
+      height: 50px;
+      background-color: #eaeaea;
+    }
+    .location {
+      @include flex-center;
+    }
+    .intro {
+      .intro__container {
+        @include flex-column-center;
+        text-align: center;
+        height: 190px;
+        border: 1px solid yellow;
+
+        .intro__title {
+          padding: 0 10px 8px 10px;
+          width: 275px;
+        }
+        .intro__subtitle {
+          width: 315px;
+        }
+        .intro__button-container {
+          width: 190px;
+        }
+      }
+    }
   }
 }
