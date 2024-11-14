@@ -25,137 +25,135 @@
 
 
 <body>
-    <header class="header">
-        <!-- H1 textuel masqué pour le SEO et l'accessibilité -->
-        <h1 class="visually-hidden">OhMyFood - Réservez le menu qui vous convient</h1>
-        <div class="header__logo">
+    <div class="main-container">
+        <header class="header">
             <a href="index.html">
-                <img src="assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
+                <h1 class="header__logo xxl-font main-title">OhMyFood</h1>
             </a>
-        </div>
-    </header>
+        </header>
 
 
-    <main class="middle-content">
-        <!-- Section pour la localisation -->
-        <section class="location">
-            <div class="location__icon">
-                <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <p class="location__city md-font">Paris, Belleville</p>
-        </section>
-
-        <!-- Section pour le titre, sous-titre et lien -->
-        <section class="intro">
-            <div class="intro__container">
-                <h1 class="intro__title xxl-font">Réservez le menu qui vous convient</h1>
-                <p class="intro__subtitle xl-font-light">Découvrez des restaurants</p>
-                <div class="intro__button-container">
-                    <a class="intro__button md-font" href="#restaurants">Explorer nos restaurants</a>
+        <main class="middle-content">
+            <!-- Section pour la localisation -->
+            <section class="location flex-center">
+                <div class="location__icon">
+                    <i class="fas fa-map-marker-alt"></i>
                 </div>
-            </div>
-        </section>
+                <p class="location__city md-font">Paris, Belleville</p>
+            </section>
 
-        <!-- Section Steps -->
-        <section class="steps">
-            <h2 class="steps__title xxl-font">Fonctionnement</h2>
-            <div class="steps__steps">
-                <div class="steps__step">
-                    <div class="steps__step-number"><span class="sm-font">1</span></div>
-                    <p class="steps__step-text md-font">Choisissez un restaurant</p>
-                </div>
-                <div class="steps__step">
-                    <div class="steps__step-number"><span class="sm-font">2</span></div>
-                    <p class="steps__step-text md-font">Créez votre menu</p>
-                </div>
-                <div class="steps__step">
-                    <div class="steps__step-number"><span class="sm-font">3</span></div>
-                    <div class="steps__step-content">
-                        <i class="steps__step-icon fas fa-store"></i>
-                        <p class="steps__step-text md-font">Dégustez au restaurant</p>
+            <!-- Section pour le titre, sous-titre et lien -->
+            <section class="intro">
+                <div class="intro__container">
+                    <h2 class="intro__title xxl-font">Réservez le menu qui vous convient</h2>
+                    <p class="intro__subtitle xl-font-light">Découvrez des restaurants</p>
+                    <div class="intro__button-container">
+                        <a class="intro__button md-font" href="#restaurants">Explorer nos restaurants</a>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section Restaurants -->
-        <section id="restaurants" class="restaurants">
-            <h2 class="restaurants__title xxl-font">Restaurants</h2>
-            <div class="restaurants__list">
-                <div class="restaurants__group">
-                    <!-- Carte Restaurant 1 -->
-                    <article class="restaurants__card">
-                        <a href="restaurant1.html" class="restaurants__link">
-                            <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                alt="Restaurant 1" class="restaurants__image">
-                            <div class="restaurants__info">
-                                <h3 class="restaurants__name xl-font xl-font">La palette du goût</h3>
-                                <i class="restaurants__heart-icon fas fa-heart"></i>
-                                <p class="restaurants__location lg-font">Ménilmontant</p>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Carte Restaurant 2 -->
-                    <article class="restaurants__card">
-                        <a href="restaurant2.html" class="restaurants__link">
-                            <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant 2"
-                                class="restaurants__image">
-                            <div class="restaurants__info">
-                                <h3 class="restaurants__name xl-font">La note enchantée</h3>
-                                <i class="restaurants__heart-icon fas fa-heart"></i>
-                                <p class="restaurants__location lg-font">Charonne</p>
-                            </div>
-                        </a>
-                    </article>
+            <!-- Section Steps -->
+            <section class="steps">
+                <h2 class="steps__title xxl-font">Fonctionnement</h2>
+                <div class="steps__steps">
+                    <div class="steps__step">
+                        <div class="steps__step-number"><span class="sm-font">1</span></div>
+                        <p class="steps__step-text md-font">Choisissez un restaurant</p>
+                    </div>
+                    <div class="steps__step">
+                        <div class="steps__step-number"><span class="sm-font">2</span></div>
+                        <p class="steps__step-text md-font">Créez votre menu</p>
+                    </div>
+                    <div class="steps__step">
+                        <div class="steps__step-number"><span class="sm-font">3</span></div>
+                        <div class="steps__step-content">
+                            <i class="steps__step-icon fas fa-store"></i>
+                            <p class="steps__step-text md-font">Dégustez au restaurant</p>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="restaurants__group">
-                    <!-- Carte Restaurant 3 -->
-                    <article class="restaurants__card">
-                        <a href="restaurant3.html" class="restaurants__link">
-                            <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                alt="Restaurant 3" class="restaurants__image">
-                            <div class="restaurants__info">
-                                <h3 class="restaurants__name xl-font">A la française</h3>
-                                <i class="restaurants__heart-icon fas fa-heart"></i>
-                                <p class="restaurants__location lg-font">Cité Rouge</p>
-                            </div>
-                        </a>
-                    </article>
-                    <!-- Carte Restaurant 4 -->
-                    <article class="restaurants__card">
-                        <a href="restaurant4.html" class="restaurants__link">
-                            <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                alt="Restaurant 4" class="restaurants__image">
-                            <div class="restaurants__info">
-                                <h3 class="restaurants__name xl-font">Le délice des sens</h3>
-                                <i class="restaurants__heart-icon fas fa-heart"></i>
-                                <p class="restaurants__location lg-font">Folie-Méricourt</p>
-                            </div>
-                        </a>
-                    </article>
+            <!-- Section Restaurants -->
+            <section id="restaurants" class="restaurants">
+                <h2 class="restaurants__title xxl-font">Restaurants</h2>
+                <div class="restaurants__list">
+                    <div class="restaurants__group">
+                        <!-- Carte Restaurant 1 -->
+                        <article class="restaurants__card">
+                            <a href="restaurant1.html" class="restaurants__link">
+                                <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                    alt="Restaurant 1" class="restaurants__image">
+                                <div class="restaurants__info">
+                                    <h3 class="restaurants__name xl-font xl-font">La palette du goût</h3>
+                                    <i class="restaurants__heart-icon fas fa-heart"></i>
+                                    <p class="restaurants__location lg-font">Ménilmontant</p>
+                                </div>
+                            </a>
+                        </article>
+                        <!-- Carte Restaurant 2 -->
+                        <article class="restaurants__card">
+                            <a href="restaurant2.html" class="restaurants__link">
+                                <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant 2"
+                                    class="restaurants__image">
+                                <div class="restaurants__info">
+                                    <h3 class="restaurants__name xl-font">La note enchantée</h3>
+                                    <i class="restaurants__heart-icon fas fa-heart"></i>
+                                    <p class="restaurants__location lg-font">Charonne</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+
+                    <div class="restaurants__group">
+                        <!-- Carte Restaurant 3 -->
+                        <article class="restaurants__card">
+                            <a href="restaurant3.html" class="restaurants__link">
+                                <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                    alt="Restaurant 3" class="restaurants__image">
+                                <div class="restaurants__info">
+                                    <h3 class="restaurants__name xl-font">A la française</h3>
+                                    <i class="restaurants__heart-icon fas fa-heart"></i>
+                                    <p class="restaurants__location lg-font">Cité Rouge</p>
+                                </div>
+                            </a>
+                        </article>
+                        <!-- Carte Restaurant 4 -->
+                        <article class="restaurants__card">
+                            <a href="restaurant4.html" class="restaurants__link">
+                                <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                    alt="Restaurant 4" class="restaurants__image">
+                                <div class="restaurants__info">
+                                    <h3 class="restaurants__name xl-font">Le délice des sens</h3>
+                                    <i class="restaurants__heart-icon fas fa-heart"></i>
+                                    <p class="restaurants__location lg-font">Folie-Méricourt</p>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
                 </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- Logo Footer -->
+            <div class="footer-logo">
+                <img src="./assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <!-- Logo Footer -->
-        <div class="footer-logo">
-            <img src="./assets/images/logo/ohmyfood.png" alt="Logo OhMyFood">
-        </div>
-
-        <!-- Liste des liens Footer -->
-        <ul class="footer-links">
-            <li><a class="md-font" href="#">Proposer un restaurant</a></li>
-            <li class="partenaire-link">
-                <i class="fa-solid fa-handshake"></i>
-                <a class="md-font" href="#">Devenir partenaire</a>
-            </li>
-            <li><a class="md-font" href="#">Mentions légales</a></li>
-            <li><a class="md-font" href="#">Contact</a></li>
-        </ul>
-    </footer>
+            <!-- Liste des liens Footer -->
+            <ul class="footer-links">
+                <li><a class="md-font" href="#">Proposer un restaurant</a></li>
+                <li class="partenaire-link">
+                    <i class="fa-solid fa-handshake"></i>
+                    <a class="md-font" href="#">Devenir partenaire</a>
+                </li>
+                <li><a class="md-font" href="#">Mentions légales</a></li>
+                <li><a class="md-font" href="#">Contact</a></li>
+            </ul>
+        </footer>
+    </div>
 </body>
 
 </html>

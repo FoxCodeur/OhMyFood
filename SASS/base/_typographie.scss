@@ -1,9 +1,11 @@
 // _typographie.scss
 @use "../utils/variables" as variables;
-
+.main-title {
+  font-family: variables.$font-logo;
+}
 .xxl-font {
   font-size: variables.$font-xxl; // 1.5rem (24px)
-  font-family: variables.$font-logo;
+
   font-weight: 700;
   line-height: 28.13px;
 }
