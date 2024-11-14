@@ -153,3 +153,11 @@ Application du style sur le fichier index.html !
     Tout d'abord, il est nécessaire de créer des variables pour définir les différentes tailles de police utilisées sur le site. Ensuite, il faut définir les styles typographiques pour chaque balise impliqué dans des modifications, tels que les titres, les sous-titres et les paragraphes.
 
 Pour chaque niveau de titre et de paragraphe dans le fichier HTML, vous appliquerez les classes appropriées afin d'associer les polices et tailles de texte définies. Cela permet de garantir une typographie cohérente et bien structurée sur l'ensemble du site.  
+On nous a donné des informations à propos des polices utilisés sur le site eton sait donc ceci: 
+
+    Logo et titres : Shrikhand
+    Texte : Roboto
+    
+J'ai crée deux variables:
+    $font-logo: 'Shrikhand', cursive;
+    $font-text: 'Roboto', sans-serif;

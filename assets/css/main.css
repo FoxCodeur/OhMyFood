@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Variables pour les polices */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -155,6 +156,7 @@ img {
 
 .xxl-font {
   font-size: 1.5rem;
+  font-family: "Shrikhand", cursive;
   font-weight: 700;
   line-height: 28.13px;
 }
@@ -187,6 +189,94 @@ img {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 16.62px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+.flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 /*# sourceMappingURL=main.css.map */
