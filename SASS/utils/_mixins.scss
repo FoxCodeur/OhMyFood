@@ -104,11 +104,6 @@
   border-radius: 20px;
   background-color: $color-background;
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  // 0 : L'ombre est décalée horizontalement de 0 pixels (aucun décalage sur l'axe X).
-  // 4px : L'ombre est décalée verticalement de 4 pixels.
-  // 15px : Le rayon de flou de l'ombre est de 15 pixels, ce qui donne un effet de diffusion.
-  // 0 : pas d'étalement de l'ombre.
-  // rgba(0, 0, 0, 0.15) : La couleur de l'ombre est noire avec une opacité de 0.15 (ce qui correspond à #00000026 en hexadécimal). Le dernier chiffre, 0.15, représente l'alpha (opacité).
   padding: 0 20px;
 }
 @mixin button($width: 218px, $height: 50px) {
@@ -122,6 +117,8 @@
   background: $gradient; // Utiliser votre variable de gradient
   border: none;
 }
+// ==============================
+// CARDS MIXINS
 @mixin card-style {
   border-radius: 15px;
   padding: 0.31rem; /* 5px */

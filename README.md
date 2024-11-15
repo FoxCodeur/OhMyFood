@@ -161,4 +161,6 @@ On nous a donné des informations à propos des polices utilisés sur le site et
 J'ai crée deux variables:
     $font-logo: 'Shrikhand', cursive;
     $font-text: 'Roboto', sans-serif;
-Ensuite on crée les mixins qui utilisent flexbox et on les appliquent sur toute la page d'accueil. 
+Ensuite on crée l'ensemble des mixins.
+ Celles qui utilisent flexbox et on les appliquent sur toute la page d'accueil. 
+ Celles qui vont être appliquées sur les cards et le bouton explorer nos restaurant. (le bouton commander sur les autres pages)
