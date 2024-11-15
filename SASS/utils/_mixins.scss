@@ -17,23 +17,35 @@
 }
 
 @mixin flex-center {
-  display: flex;
-  justify-content: center;
+  @include flex-justify-center;
   align-items: center;
 }
-
+// FLEXBOX COLUMN
 @mixin flex-column {
   display: flex;
   flex-direction: column;
 }
-
 @mixin flex-column-center {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   justify-content: center;
   align-items: center;
 }
-
+@mixin flex-column-between {
+  @include flex-column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-column-around {
+  @include flex-column;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-column-evenly {
+  @include flex-column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+// END FLEXBOX COLUMN
 @mixin flex-row {
   display: flex;
   flex-direction: row;
@@ -43,18 +55,22 @@
   display: flex;
   justify-content: space-between;
 }
-
-@mixin flex-column-between {
+@mixin flex-evenly {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
 }
-@mixin flex-column-around {
+@mixin flex-around {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+}
+
+@mixin flex-column-adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-column;
+  align-items: $align-items;
+  justify-content: $justify-content;
 }
 
 @mixin flex-align-start {
@@ -121,7 +137,7 @@
 // CARDS MIXINS
 @mixin card-style {
   border-radius: 15px;
-  padding: 0.31rem; /* 5px */
+  padding: 1rem; /* 5px */
   box-shadow: 0px 4px 15px 0px #0000001a;
 }
 

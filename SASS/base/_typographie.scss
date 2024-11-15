@@ -10,7 +10,8 @@ $font-logo: "Shrikhand", cursive;
 p,
 h1,
 h2,
-h3 {
+h3,
+a {
   font-family: $font-primary;
 }
 // -----------------------------------------------
@@ -44,6 +45,11 @@ h3 {
 .md-font {
   font-size: variables.$font-md; // 1rem (16px)
   font-weight: 600;
+  line-height: 18.75px;
+}
+.md-font-a {
+  font-size: variables.$font-md; // 1rem (16px)
+  font-weight: 500;
   line-height: 18.75px;
 }
 

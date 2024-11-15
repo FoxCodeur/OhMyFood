@@ -7,16 +7,16 @@
   .middle-content {
     width: 100%;
     .location {
+      @include flex-center;
+      box-shadow: $box-shadow-location;
+      margin-bottom: 5px;
       height: 50px;
       background-color: #eaeaea;
     }
-    .location {
-      @include flex-center;
-    }
     .intro {
       .intro__container {
-        @include flex-column-around;
-        height: 250px;
+        @include flex-column-evenly;
+        height: 300px;
         text-align: center;
         background-color: $color-background;
 
@@ -33,7 +33,10 @@
       }
     }
     .steps {
-      height: 350px;
+      @include flex-column-evenly;
+      align-items: flex-start;
+
+      height: 390px;
       padding-left: 0.8rem;
       .step__container {
         @include flex-column-between;
@@ -86,8 +89,26 @@
       }
     }
     .restaurants {
+      @include flex-column-adjustable(left, space-evenly);
+      height: 75rem;
+      .restaurants__title {
+        padding-left: 1rem;
+      }
       .restaurants__container {
         .restaurants__cards-set {
+          .restaurants__card {
+            height: 275px;
+            .restaurants__link {
+              .restaurants__card-details {
+                @include flex-column-adjustable(left, center);
+                height: 70px;
+                padding: 0 0.8rem 0 0.8rem;
+                .restaurants__card-header {
+                  @include flex-between;
+                }
+              }
+            }
+          }
           .card {
             @include card-style; // Applique le style de la carte
 
