@@ -85,5 +85,26 @@
         }
       }
     }
+    .restaurants {
+      .restaurants__container {
+        .restaurants__cards-set {
+          .card {
+            @include card-style; // Applique le style de la carte
+
+            & img {
+              // Sélecteur pour l'image dans la carte
+              @include card-img-style(
+                100%,
+                // largeur de l'image
+                190px,
+                // hauteur de l'image
+                50% 60%
+                  // position de l'image (50% horizontalement, 20px vers le haut verticalement)
+              );
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -122,3 +122,17 @@
   background: $gradient; // Utiliser votre variable de gradient
   border: none;
 }
+@mixin card-style {
+  border-radius: 15px;
+  padding: 0.31rem; /* 5px */
+  box-shadow: 0px 4px 15px 0px #0000001a;
+}
+
+@mixin card-img-style($width: 100%, $height: auto, $object-position: 50% 50%) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  object-position: $object-position; // Ajout dynamique de la position
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
