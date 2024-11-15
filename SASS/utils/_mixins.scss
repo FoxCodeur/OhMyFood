@@ -132,7 +132,7 @@
   width: $width;
   height: $height;
   object-fit: cover;
-  object-position: $object-position; // Ajout dynamique de la position
+  object-position: $object-position; // Ajout dynamique de la position.
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
