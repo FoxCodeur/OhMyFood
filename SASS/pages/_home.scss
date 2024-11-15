@@ -1,4 +1,5 @@
 @use "../utils/mixins" as *;
+@use "../utils/variables" as *;
 .main-container {
   width: 375px;
   margin: 0 auto;
@@ -17,7 +18,7 @@
         @include flex-column-center;
         text-align: center;
         height: 190px;
-        border: 1px solid yellow;
+        background-color: $color-background;
 
         .intro__title {
           padding: 0 10px 8px 10px;
@@ -32,9 +33,52 @@
       }
     }
     .steps {
+      padding: 0 10px 0 20px;
       .step__container {
+        @include flex-column-center;
         .step__item {
           @include button-style;
+          @include flex-center;
+          position: relative;
+        }
+        .step__item-number::before {
+          // On aurait tout aussi bien pu renseigner le content avec 1, 2, 3,
+          // j'ai préféré utiliser la méthode avec data-step car je considère
+          // que le projet pourrait évoluer et que les numéros pourrait être dynamiques
+          // via javascript.
+          content: attr(
+            data-step
+          ); /* Utilise un attribut personnalisé pour le numéro */
+          position: absolute;
+          left: -1rem; /* Décale l'élément à l'extérieur, ou ajuste selon le besoin */
+          top: 50%; /* Centrer verticalement */
+          transform: translateY(-50%); /* Corrige le centrage */
+          width: 24px;
+          height: 24px;
+          text-align: center;
+          line-height: 8px;
+          color: white;
+          font-size: $font-sm;
+          background-color: $color-primary;
+          border-radius: 50%;
+          padding: 0.5rem;
+        }
+        .step__item-text {
+          width: 211px;
+        }
+        .step__item-content {
+          @include flex-center;
+        }
+        .step__item-content::before {
+          content: "\f54e"; /* Utilise le code Unicode pour 'fa-store' */
+          font-family: "Font Awesome 6 Free"; /* Utilise la police Font Awesome */
+          font-weight: 900;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          color: $color-primary;
+          transform: translateY(-50%);
+          margin-left: 2rem;
         }
       }
     }
