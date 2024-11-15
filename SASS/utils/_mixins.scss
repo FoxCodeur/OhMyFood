@@ -48,6 +48,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-column-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 @mixin flex-align-start {
@@ -91,8 +98,7 @@
 }
 // ==============================
 // BUTTON MIXINS
-@mixin button-style {
-  opacity: 1;
+@mixin steps-style {
   width: 335px;
   height: 72.38px;
   border-radius: 20px;
@@ -104,4 +110,15 @@
   // 0 : pas d'étalement de l'ombre.
   // rgba(0, 0, 0, 0.15) : La couleur de l'ombre est noire avec une opacité de 0.15 (ce qui correspond à #00000026 en hexadécimal). Le dernier chiffre, 0.15, représente l'alpha (opacité).
   padding: 0 20px;
+}
+@mixin button($width: 218px, $height: 50px) {
+  @include flex-center;
+  width: $width;
+  height: $height;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background: $gradient; // Utiliser votre variable de gradient
+  border: none;
 }

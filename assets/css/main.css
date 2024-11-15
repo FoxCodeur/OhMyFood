@@ -233,10 +233,10 @@ h3 {
 .main-container .middle-content .intro .intro__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  height: 250px;
   text-align: center;
-  height: 190px;
   background-color: #f6f6f6;
 }
 .main-container .middle-content .intro .intro__container .intro__title {
@@ -247,19 +247,31 @@ h3 {
   width: 315px;
 }
 .main-container .middle-content .intro .intro__container .intro__button-container {
-  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  border: none;
 }
 .main-container .middle-content .steps {
-  padding: 0 10px 0 20px;
+  height: 350px;
+  padding-left: 0.8rem;
 }
 .main-container .middle-content .steps .step__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 1rem;
+  height: 300px;
 }
 .main-container .middle-content .steps .step__container .step__item {
-  opacity: 1;
   width: 335px;
   height: 72.38px;
   border-radius: 20px;
