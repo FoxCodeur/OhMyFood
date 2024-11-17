@@ -13,6 +13,11 @@
 }
 
 html,
+body {
+  height: 100%;
+}
+
+html,
 body,
 div,
 span,
@@ -221,11 +226,26 @@ a {
   align-items: center;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #353535;
+  color: white;
+  padding: 1rem 2rem;
+}
+
 .main-container {
+  display: flex;
+  flex-direction: column;
   width: 375px;
+  min-height: 100vh;
   margin: 0 auto;
 }
 .main-container .middle-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Prendre tout l'espace disponible pour avoir le footer collé en bas de page */
   width: 100%;
 }
 .main-container .middle-content .location {

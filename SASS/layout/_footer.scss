@@ -1,0 +1,9 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.footer {
+  @include flex-column;
+  gap: 1rem;
+  background-color: $color-footer-background;
+  color: white;
+  padding: 1rem 2rem;
+}

@@ -1,10 +1,14 @@
 @use "../utils/mixins" as *;
 @use "../utils/variables" as *;
 .main-container {
+  @include flex-column;
   width: 375px;
+  min-height: 100vh;
   margin: 0 auto;
 
   .middle-content {
+    @include flex-column;
+    flex: 1; /* Prendre tout l'espace disponible pour avoir le footer collé en bas de page */
     width: 100%;
     .location {
       @include flex-center;
