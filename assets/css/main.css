@@ -214,16 +214,45 @@ a {
   line-height: 16.62px;
 }
 
+.cup-loader {
+  height: 140px;
+  width: 180px;
+  border: 6px solid black;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.location .location__icon {
+  display: flex;
+  gap: 0.6rem;
+}
+.location .location__city {
+  width: 122px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.location .location__city::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 63px;
 }
-.header .header__link {
+.header .header__logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.header .header__logo-container .header__logo {
+  width: 50%;
+  min-width: 200px;
 }
 
 .footer {
@@ -238,6 +267,7 @@ a {
 .main-container {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 375px;
   min-height: 100vh;
   margin: 0 auto;

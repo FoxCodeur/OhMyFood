@@ -2,6 +2,7 @@
 @use "../utils/variables" as *;
 .main-container {
   @include flex-column;
+  position: relative;
   width: 375px;
   min-height: 100vh;
   margin: 0 auto;
@@ -11,7 +12,9 @@
     flex: 1; /* Prendre tout l'espace disponible pour avoir le footer collé en bas de page */
     width: 100%;
     .location {
-      @include flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       box-shadow: $box-shadow-location;
       margin-bottom: 5px;
       height: 50px;

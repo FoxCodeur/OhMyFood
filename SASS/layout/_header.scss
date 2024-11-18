@@ -1,8 +1,16 @@
 @use "../utils/mixins" as *;
+
 .header {
   @include flex-center;
   height: 63px;
-  .header__link {
+
+  .header__logo-container {
     @include flex-center;
+    width: 100%;
+
+    .header__logo {
+      width: 50%;
+      min-width: 200px;
+    }
   }
 }
