@@ -130,8 +130,14 @@
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  background: $gradient; // Utiliser votre variable de gradient
+  background: $gradient;
+  box-shadow: 0px 4px 10px 0px #00000040;
+  transition: box-shadow 0.3s ease;
   border: none;
+  &:hover {
+    background: $gradient-lightened;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
+  }
 }
 // ==============================
 // CARDS MIXINS

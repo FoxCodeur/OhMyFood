@@ -11,6 +11,15 @@ $gradient: linear-gradient(
   rgba(255, 121, 218, 1) 0%,
   rgba(147, 86, 220, 1) 100%
 );
+// Gradient éclairci pour le hover
+$gradient-lightened: linear-gradient(
+  180deg,
+  lighten(rgba(255, 121, 218, 1), 5%) 0%,
+  /* amount : Le pourcentage
+   d'éclaircissement. Dans ce cas, 10% signifie que la couleur sera éclaircie
+  de 10%. */
+    lighten(rgba(147, 86, 220, 1), 5%) 100%
+);
 $box-shadow-location: 0px 4px 4px 0px #00000040;
 // Les différentes font size
 $font-xxl: 1.5rem; // 24px
