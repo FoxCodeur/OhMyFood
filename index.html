@@ -25,11 +25,15 @@
 
 
 <body>
-
-    <div class="main-container">
-        <div class="cup-loader">
-
+    <div class="overlay">
+        <div class="overlay__inner">
+            <div class="overlay__content">
+                <div class="loader"></div>
+            </div>
         </div>
+    </div>
+    <!-- Conteneur principal -->
+    <div class="main-container">
         <header class="header">
             <a href="index.html" class="header__logo-container">
                 <img src="./assets/images/logo/ohmyfood.png" alt="OhMyFood Logo" class="header__logo">
@@ -42,6 +46,7 @@
             <section class="location">
                 <form action="#" class="location__icon">
                     <i class="fas fa-map-marker-alt"></i>
+
                     <input type="text" placeholder="Paris, Belleville" aria-label="Saisissez une ville"
                         class="location__city md-font"></input>
                 </form>
