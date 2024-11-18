@@ -302,6 +302,10 @@ a {
   align-items: center;
   margin-left: 1rem;
   height: 300px;
+  /* Styles par défaut pour toutes les icônes ::before et ::after */
+  /* Correction spécifique pour le ::after de .step__item-content-2 */
+  /* Icônes spécifiques */
+  /* Changement de couleur au hover du parent .step__item */
 }
 .main-container .middle-content .steps .step__container .step__item {
   width: 335px;
@@ -314,6 +318,7 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
+  cursor: pointer;
 }
 .main-container .middle-content .steps .step__container .step__item-number::before {
   content: attr(data-step); /* Utilise un attribut personnalisé pour le numéro */
@@ -339,16 +344,46 @@ a {
   justify-content: center;
   align-items: center;
 }
-.main-container .middle-content .steps .step__container .step__item-content::before {
-  content: "\f54e"; /* Utilise le code Unicode pour 'fa-store' */
-  font-family: "Font Awesome 6 Free"; /* Utilise la police Font Awesome */
-  font-weight: 900;
+.main-container .middle-content .steps .step__container .step__item-content-1::before,
+.main-container .middle-content .steps .step__container .step__item-content-2::before,
+.main-container .middle-content .steps .step__container .step__item-content-2::after,
+.main-container .middle-content .steps .step__container .step__item-content-3::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
   position: absolute;
   left: 0;
   top: 50%;
-  color: #9356dc;
   transform: translateY(-50%);
   margin-left: 2rem;
+  color: #7e7e7e;
+  transition: color 0.3s ease; /* Ajout de la transition */
+}
+.main-container .middle-content .steps .step__container .step__item-content-1::before,
+.main-container .middle-content .steps .step__container .step__item-content-2::before,
+.main-container .middle-content .steps .step__container .step__item-content-2::after,
+.main-container .middle-content .steps .step__container .step__item-content-3::before {
+  font-size: 1.2rem;
+}
+.main-container .middle-content .steps .step__container .step__item-content-2::after {
+  margin-left: 2.4rem; /* Ajustement du margin */
+}
+.main-container .middle-content .steps .step__container .step__item-content-1::before {
+  content: "\f3cd"; /* Code Unicode pour la première icône */
+}
+.main-container .middle-content .steps .step__container .step__item-content-2::before {
+  content: "\f142"; /* Code Unicode pour la deuxième icône */
+}
+.main-container .middle-content .steps .step__container .step__item-content-2::after {
+  content: "\f0c9"; /* Code Unicode pour la troisième icône */
+}
+.main-container .middle-content .steps .step__container .step__item-content-3::before {
+  content: "\f54e"; /* Code Unicode pour la quatrième icône */
+}
+.main-container .middle-content .steps .step__container .step__item:hover .step__item-content-1::before,
+.main-container .middle-content .steps .step__container .step__item:hover .step__item-content-2::before,
+.main-container .middle-content .steps .step__container .step__item:hover .step__item-content-2::after,
+.main-container .middle-content .steps .step__container .step__item:hover .step__item-content-3::before {
+  color: #9356dc; /* Couleur au hover */
 }
 .main-container .middle-content .restaurants {
   display: flex;
