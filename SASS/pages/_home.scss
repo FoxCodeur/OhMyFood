@@ -141,6 +141,7 @@
       .restaurants__container {
         .restaurants__cards-set {
           .restaurants__card {
+            position: relative;
             height: 275px;
             .restaurants__link {
               .restaurants__card-details {
@@ -149,6 +150,9 @@
                 padding: 0 0.8rem 0 0.8rem;
                 .restaurants__card-header {
                   @include flex-between;
+                  & i {
+                    font-size: 1.2rem;
+                  }
                 }
               }
             }

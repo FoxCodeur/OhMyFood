@@ -12,6 +12,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -289,6 +293,19 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.badge-highlight {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  top: 1.7rem;
+  right: 1.7rem;
+  text-align: center;
+  line-height: 2;
+  color: #008766;
+  background-color: #99e2d0;
+}
+
 .location__icon {
   display: flex;
   gap: 0.6rem;
@@ -510,6 +527,7 @@ a {
   padding-left: 1rem;
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card {
+  position: relative;
   height: 275px;
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details {
@@ -523,6 +541,9 @@ a {
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header {
   display: flex;
   justify-content: space-between;
+}
+.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header i {
+  font-size: 1.2rem;
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .card {
   border-radius: 15px;

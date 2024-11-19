@@ -26,6 +26,8 @@ $gradient-lightened: linear-gradient(
     lighten(rgba(147, 86, 220, 1), 5%) 100%
 );
 $box-shadow-location: 0px 4px 4px 0px #00000040;
+//badge highlight
+$font-color-badge-highlight: #008766;
 // Les différentes font size
 $font-xxl: 1.5rem; // 24px
 $font-xl: 1.125rem; // 18px
