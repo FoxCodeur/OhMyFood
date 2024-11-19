@@ -293,6 +293,24 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.restaurants__card-heart-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.3rem;
+  transition: all 0.3s ease; /* ease pour une transition
+lente, qui accélère ensuite, puis ralentie */
+}
+.restaurants__card-heart-icon--full {
+  opacity: 0;
+}
+.restaurants__card-heart-icon--full:hover {
+  opacity: 1;
+  background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
+  background-clip: text; /* Supporte le fond comme clip de texte */
+  color: transparent; /* Rendre le texte transparent pour voir le fond dégradé */
+}
+
 .badge-highlight {
   position: absolute;
   width: 80px;
@@ -542,8 +560,8 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header i {
-  font-size: 1.2rem;
+.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header .restaurants__card-heart-container {
+  position: relative;
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .card {
   border-radius: 15px;

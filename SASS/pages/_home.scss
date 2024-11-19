@@ -150,8 +150,8 @@
                 padding: 0 0.8rem 0 0.8rem;
                 .restaurants__card-header {
                   @include flex-between;
-                  & i {
-                    font-size: 1.2rem;
+                  .restaurants__card-heart-container {
+                    position: relative;
                   }
                 }
               }
