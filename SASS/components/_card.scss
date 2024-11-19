@@ -1,0 +1,14 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.badge-highlight {
+  position: absolute;
+  width: 80px;
+  height: 29px;
+  border-radius: 2px;
+  top: 1.7rem;
+  right: 1.7rem;
+  text-align: center;
+  line-height: 2;
+  color: $font-color-badge-highlight;
+  background-color: $color-tertiary;
+}

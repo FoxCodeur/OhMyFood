@@ -1,0 +1,16 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.location__icon {
+  display: flex;
+  gap: 0.6rem;
+}
+.location__city {
+  width: 122px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  &::placeholder {
+    color: $form-placeholder-color;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,179 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.main-container {
+  @include flex-column;
+  position: relative;
+  width: 375px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  .middle-content {
+    @include flex-column;
+    flex: 1; /* Prendre tout l'espace disponible pour avoir le footer collé en bas de page */
+    width: 100%;
+    .location {
+      @include flex-center;
+      box-shadow: $box-shadow-location;
+      margin-bottom: 5px;
+      height: 50px;
+      background-color: #eaeaea;
+    }
+    .intro {
+      .intro__container {
+        @include flex-column-evenly;
+        height: 300px;
+        text-align: center;
+        background-color: $color-background;
+
+        .intro__title {
+          padding: 0 10px 8px 10px;
+          width: 275px;
+        }
+        .intro__subtitle {
+          width: 315px;
+        }
+        .intro__button-container {
+          @include button;
+        }
+      }
+    }
+    .steps {
+      @include flex-column-evenly;
+      align-items: flex-start;
+
+      height: 390px;
+      padding-left: 0.8rem;
+      .step__container {
+        @include flex-column-between;
+        margin-left: 1rem;
+        height: 300px;
+        .step__item {
+          @include steps-style;
+          @include flex-center;
+          position: relative;
+          cursor: pointer;
+        }
+        .step__item-number::before {
+          // On aurait tout aussi bien pu renseigner le content avec 1, 2, 3,
+          // j'ai préféré utiliser la méthode avec data-step car je considère
+          // que le projet pourrait évoluer et que les numéros pourrait être dynamiques
+          // via javascript.
+          content: attr(
+            data-step
+          ); /* Utilise un attribut personnalisé pour le numéro */
+          position: absolute;
+          left: -1rem; /* Décale l'élément à l'extérieur, ou ajuste selon le besoin */
+          top: 50%; /* Centrer verticalement */
+          transform: translateY(-50%); /* Corrige le centrage */
+          width: 24px;
+          height: 24px;
+          text-align: center;
+          line-height: 8px;
+          color: white;
+          font-size: $font-sm;
+          background-color: $color-primary;
+          border-radius: 50%;
+          padding: 0.5rem;
+        }
+        .step__item-text {
+          width: 211px;
+        }
+        .step__item-content {
+          @include flex-center;
+        }
+        /* Styles par défaut pour toutes les icônes ::before et ::after */
+        .step__item-content-1::before,
+        .step__item-content-2::before,
+        .step__item-content-2::after,
+        .step__item-content-3::before {
+          font-family: "Font Awesome 6 Free";
+          font-weight: 600;
+
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-left: 2rem;
+          color: $step-icon-color;
+          transition: color 0.3s ease; /* Ajout de la transition */
+        }
+        .step__item-content-1::before,
+        .step__item-content-2::before,
+        .step__item-content-2::after,
+        .step__item-content-3::before {
+          font-size: 1.2rem;
+        }
+
+        /* Correction spécifique pour le ::after de .step__item-content-2 */
+        .step__item-content-2::after {
+          margin-left: 2.4rem; /* Ajustement du margin */
+        }
+
+        /* Icônes spécifiques */
+        .step__item-content-1::before {
+          content: "\f3cd"; /* Code Unicode pour la première icône */
+        }
+        .step__item-content-2::before {
+          content: "\f142"; /* Code Unicode pour la deuxième icône */
+        }
+        .step__item-content-2::after {
+          content: "\f0c9"; /* Code Unicode pour la troisième icône */
+        }
+        .step__item-content-3::before {
+          content: "\f54e"; /* Code Unicode pour la quatrième icône */
+        }
+
+        /* Changement de couleur au hover du parent .step__item */
+        .step__item:hover .step__item-content-1::before,
+        .step__item:hover .step__item-content-2::before,
+        .step__item:hover .step__item-content-2::after,
+        .step__item:hover .step__item-content-3::before {
+          color: $color-primary; /* Couleur au hover */
+        }
+      }
+    }
+    .restaurants {
+      @include flex-column-adjustable(left, space-evenly);
+      height: 75rem;
+      .restaurants__title {
+        padding-left: 1rem;
+      }
+      .restaurants__container {
+        .restaurants__cards-set {
+          .restaurants__card {
+            position: relative;
+            height: 275px;
+            .restaurants__link {
+              .restaurants__card-details {
+                @include flex-column-adjustable(left, center);
+                height: 70px;
+                padding: 0 0.8rem 0 0.8rem;
+                .restaurants__card-header {
+                  @include flex-between;
+                  .restaurants__card-heart-container {
+                    position: relative;
+                  }
+                }
+              }
+            }
+          }
+          .card {
+            @include card-style; // Applique le style de la carte
+
+            & img {
+              // Sélecteur pour l'image dans la carte
+              @include card-img-style(
+                100%,
+                // largeur de l'image
+                190px,
+                // hauteur de l'image
+                50% 60%
+                  // position de l'image (50% horizontalement, 20px vers le haut verticalement)
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
