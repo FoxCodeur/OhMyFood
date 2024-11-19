@@ -9,8 +9,15 @@
     width: 100%;
 
     .header__logo {
-      width: 50%;
-      min-width: 200px;
+      width: clamp(
+        200px,
+        50%,
+        200px
+      ); /* Fonction clamp()
+      La fonction prend trois arguments :
+          valeur min : La plus petite valeur que l'élément peut avoir.
+          valeur préférée : La valeur idéale (généralement fluide ou relative, comme un pourcentage ou une unité vw).
+          valeur max : La plus grande valeur que l'élément peut avoir. */
     }
   }
 }

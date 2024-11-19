@@ -17,11 +17,6 @@ html {
 }
 
 html,
-body {
-  height: 100%;
-}
-
-html,
 body,
 div,
 span,
@@ -353,8 +348,11 @@ lente, qui accélère ensuite, puis ralentie */
   width: 100%;
 }
 .header .header__logo-container .header__logo {
-  width: 50%;
-  min-width: 200px;
+  width: clamp(200px, 50%, 200px); /* Fonction clamp()
+La fonction prend trois arguments :
+    valeur min : La plus petite valeur que l'élément peut avoir.
+    valeur préférée : La valeur idéale (généralement fluide ou relative, comme un pourcentage ou une unité vw).
+    valeur max : La plus grande valeur que l'élément peut avoir. */
 }
 
 .footer {
@@ -380,14 +378,12 @@ lente, qui accélère ensuite, puis ralentie */
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 375px;
-  min-height: 100vh;
+  width: 100%;
   margin: 0 auto;
 }
 .main-container .middle-content {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Prendre tout l'espace disponible pour avoir le footer collé en bas de page */
   width: 100%;
 }
 .main-container .middle-content .location {
@@ -450,10 +446,6 @@ lente, qui accélère ensuite, puis ralentie */
   align-items: center;
   margin-left: 1rem;
   height: 300px;
-  /* Styles par défaut pour toutes les icônes ::before et ::after */
-  /* Correction spécifique pour le ::after de .step__item-content-2 */
-  /* Icônes spécifiques */
-  /* Changement de couleur au hover du parent .step__item */
 }
 .main-container .middle-content .steps .step__container .step__item {
   width: 335px;
@@ -470,11 +462,11 @@ lente, qui accélère ensuite, puis ralentie */
   cursor: pointer;
 }
 .main-container .middle-content .steps .step__container .step__item-number::before {
-  content: attr(data-step); /* Utilise un attribut personnalisé pour le numéro */
+  content: attr(data-step);
   position: absolute;
-  left: -1rem; /* Décale l'élément à l'extérieur, ou ajuste selon le besoin */
-  top: 50%; /* Centrer verticalement */
-  transform: translateY(-50%); /* Corrige le centrage */
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 24px;
   height: 24px;
   text-align: center;
@@ -505,34 +497,26 @@ lente, qui accélère ensuite, puis ralentie */
   transform: translateY(-50%);
   margin-left: 2rem;
   color: #7e7e7e;
-  transition: color 0.3s ease; /* Ajout de la transition */
-}
-.main-container .middle-content .steps .step__container .step__item-content-1::before,
-.main-container .middle-content .steps .step__container .step__item-content-2::before,
-.main-container .middle-content .steps .step__container .step__item-content-2::after,
-.main-container .middle-content .steps .step__container .step__item-content-3::before {
-  font-size: 1.2rem;
-}
-.main-container .middle-content .steps .step__container .step__item-content-2::after {
-  margin-left: 2.4rem; /* Ajustement du margin */
+  transition: color 0.3s ease;
 }
 .main-container .middle-content .steps .step__container .step__item-content-1::before {
-  content: "\f3cd"; /* Code Unicode pour la première icône */
+  content: "\f3cd";
 }
 .main-container .middle-content .steps .step__container .step__item-content-2::before {
-  content: "\f142"; /* Code Unicode pour la deuxième icône */
+  content: "\f142";
 }
 .main-container .middle-content .steps .step__container .step__item-content-2::after {
-  content: "\f0c9"; /* Code Unicode pour la troisième icône */
+  content: "\f0c9";
+  margin-left: 2.4rem;
 }
 .main-container .middle-content .steps .step__container .step__item-content-3::before {
-  content: "\f54e"; /* Code Unicode pour la quatrième icône */
+  content: "\f54e";
 }
 .main-container .middle-content .steps .step__container .step__item:hover .step__item-content-1::before,
 .main-container .middle-content .steps .step__container .step__item:hover .step__item-content-2::before,
 .main-container .middle-content .steps .step__container .step__item:hover .step__item-content-2::after,
 .main-container .middle-content .steps .step__container .step__item:hover .step__item-content-3::before {
-  color: #9356dc; /* Couleur au hover */
+  color: #9356dc;
 }
 .main-container .middle-content .restaurants {
   display: flex;
@@ -558,6 +542,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header .restaurants__card-heart-container {
@@ -575,6 +560,20 @@ lente, qui accélère ensuite, puis ralentie */
   object-position: 50% 60%;
   border-radius: 10px 10px 0 0;
   overflow: hidden;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    max-width: 1440px;
+  }
+  .main-container .middle-content .steps .step__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    height: 80px;
+    width: 1100px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
