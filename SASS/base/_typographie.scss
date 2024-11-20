@@ -1,4 +1,5 @@
 // _typographie.scss
+@use "../utils/mixins" as *;
 @use "../utils/variables" as variables;
 // Import des polices via Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap");
@@ -18,9 +19,13 @@ a {
 .main-title {
   font-family: variables.$font-logo;
 }
+.double-xl-font {
+  font-size: variables.$font-double-xl; // 2.5rem (40px)
+  font-weight: 700;
+  line-height: 46.88px;
+}
 .xxl-font {
   font-size: variables.$font-xxl; // 1.5rem (24px)
-
   font-weight: 700;
   line-height: 28.13px;
 }

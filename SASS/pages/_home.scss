@@ -5,7 +5,7 @@
   @include flex-column;
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 
   // Contenu principal
   .middle-content {
@@ -15,25 +15,25 @@
     .location {
       @include flex-center;
       box-shadow: $box-shadow-location;
-      margin-bottom: 5px;
-      height: 50px;
+      margin-bottom: 0.3125rem; // 5px
+      height: 3.125rem; // 50px
       background-color: #eaeaea;
     }
 
     .intro {
       .intro__container {
         @include flex-column-evenly;
-        height: 300px;
+        height: 18.75rem; // 300px
         text-align: center;
         background-color: $color-background;
 
         .intro__title {
-          padding: 0 10px 8px 10px;
-          width: 275px;
+          padding: 0 0.625rem 0.5rem 0.625rem; // 10px 8px 10px
+          width: 17.1875rem; // 275px
         }
 
         .intro__subtitle {
-          width: 315px;
+          width: 19.6875rem; // 315px
         }
 
         .intro__button-container {
@@ -45,13 +45,13 @@
     .steps {
       @include flex-column-evenly;
       align-items: flex-start;
-      height: 390px;
-      padding-left: 0.8rem;
+      margin: auto;
+      height: 25rem; // 390px
 
       .step__container {
         @include flex-column-between;
         margin-left: 1rem;
-        height: 300px;
+        height: 17rem; // 300px
 
         .step__item {
           @include steps-style;
@@ -66,8 +66,8 @@
           left: -1rem;
           top: 50%;
           transform: translateY(-50%);
-          width: 24px;
-          height: 24px;
+          width: 1.5rem; // 24px
+          height: 1.5rem; // 24px
           text-align: center;
           line-height: 8px;
           color: white;
@@ -78,7 +78,7 @@
         }
 
         .step__item-text {
-          width: 211px;
+          width: 13.1875rem; // 211px
         }
 
         .step__item-content {
@@ -128,42 +128,44 @@
     }
 
     .restaurants {
-      @include flex-column-adjustable(left, space-evenly);
+      @include flex-column-evenly;
+      align-items: flex-start;
+      width: 100%;
       height: 75rem;
-
+      background-color: $color-background;
       .restaurants__title {
         padding-left: 1rem;
       }
-
       .restaurants__container {
-        .restaurants__cards-set {
-          .restaurants__card {
-            position: relative;
-            height: 275px;
+        width: 100%;
+        .restaurants__card {
+          max-width: 375px;
+          margin: auto;
+          position: relative;
+          height: 17.1875rem; // 275px
 
-            .restaurants__link {
-              .restaurants__card-details {
-                @include flex-column-adjustable(left, center);
-                height: 70px;
-                padding: 0 0.8rem 0 0.8rem;
+          .restaurants__link {
+            .restaurants__card-details {
+              @include flex-column-adjustable(left, center);
+              height: 4.375rem; // 70px
+              padding: 0 0.8rem 0 0.8rem;
 
-                .restaurants__card-header {
-                  @include flex-between;
+              .restaurants__card-header {
+                @include flex-between;
 
-                  .restaurants__card-heart-container {
-                    position: relative;
-                  }
+                .restaurants__card-heart-container {
+                  position: relative;
                 }
               }
             }
           }
+        }
 
-          .card {
-            @include card-style;
+        .card {
+          @include card-style;
 
-            & img {
-              @include card-img-style(100%, 190px, 50% 60%);
-            }
+          & img {
+            @include card-img-style(100%, 11.875rem, 50% 60%); //190px
           }
         }
       }
@@ -173,16 +175,65 @@
 
 // Styles spécifiques pour les écrans desktop
 @media screen and (min-width: 1024px) {
+  // Styles communs pour steps et restaurants
+  .common-width {
+    width: 68.75rem; // 1100px
+    margin: auto;
+  }
+  // ----------------------------------------
   .main-container {
-    max-width: 1440px;
+    max-width: 90rem; // 1440px
     .middle-content {
+      .intro {
+        .intro__container {
+          @include flex-column-evenly;
+          height: 13.75rem; // 220px
+          .intro__title {
+            width: 41.875rem; // 670px
+            font-size: 2.5rem; // 40px
+            line-height: 46.88px;
+          }
+          .intro__subtitle {
+            width: 41.875rem; // 670px
+          }
+        }
+      }
       .steps {
+        @extend .common-width;
+        @include flex-column;
+        height: 14.25rem; // 228px
+        padding-top: 3rem;
+        // border: 1px solid black;
         .step__container {
-          @include flex-between;
+          @include flex-around;
           margin: auto;
-          height: 80px;
-          width: 1100px;
+          height: 5rem; // 80px
+          width: 100%;
           // border: 1px solid black;
+        }
+      }
+      .restaurants {
+        @include flex-column;
+        @extend .common-width;
+        width: 100%;
+        height: 45rem; // 720px
+
+        .restaurants__title {
+          @extend .common-width;
+        }
+        .restaurants__container {
+          @include flex-column-evenly;
+          height: 40rem; // 640px
+          .restaurants__cards-row {
+            @include flex-evenly;
+            width: 90%;
+            height: 20rem; // 320px
+            margin: auto;
+
+            .restaurants__card {
+              width: 30.625rem; // 490px
+            }
+          }
         }
       }
     }

@@ -171,6 +171,12 @@ a {
   font-family: "Shrikhand", cursive;
 }
 
+.double-xl-font {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 46.88px;
+}
+
 .xxl-font {
   font-size: 1.5rem;
   font-weight: 700;
@@ -379,7 +385,7 @@ La fonction prend trois arguments :
   flex-direction: column;
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
 }
 .main-container .middle-content {
   display: flex;
@@ -391,8 +397,8 @@ La fonction prend trois arguments :
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
-  margin-bottom: 5px;
-  height: 50px;
+  margin-bottom: 0.3125rem;
+  height: 3.125rem;
   background-color: #eaeaea;
 }
 .main-container .middle-content .intro .intro__container {
@@ -400,16 +406,16 @@ La fonction prend trois arguments :
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 300px;
+  height: 18.75rem;
   text-align: center;
   background-color: #f6f6f6;
 }
 .main-container .middle-content .intro .intro__container .intro__title {
-  padding: 0 10px 8px 10px;
-  width: 275px;
+  padding: 0 0.625rem 0.5rem 0.625rem;
+  width: 17.1875rem;
 }
 .main-container .middle-content .intro .intro__container .intro__subtitle {
-  width: 315px;
+  width: 19.6875rem;
 }
 .main-container .middle-content .intro .intro__container .intro__button-container {
   display: flex;
@@ -436,8 +442,8 @@ La fonction prend trois arguments :
   justify-content: space-evenly;
   align-items: center;
   align-items: flex-start;
-  height: 390px;
-  padding-left: 0.8rem;
+  margin: auto;
+  height: 25rem;
 }
 .main-container .middle-content .steps .step__container {
   display: flex;
@@ -445,7 +451,7 @@ La fonction prend trois arguments :
   justify-content: space-between;
   align-items: center;
   margin-left: 1rem;
-  height: 300px;
+  height: 17rem;
 }
 .main-container .middle-content .steps .step__container .step__item {
   width: 335px;
@@ -467,8 +473,8 @@ La fonction prend trois arguments :
   left: -1rem;
   top: 50%;
   transform: translateY(-50%);
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   text-align: center;
   line-height: 8px;
   color: white;
@@ -478,7 +484,7 @@ La fonction prend trois arguments :
   padding: 0.5rem;
 }
 .main-container .middle-content .steps .step__container .step__item-text {
-  width: 211px;
+  width: 13.1875rem;
 }
 .main-container .middle-content .steps .step__container .step__item-content {
   display: flex;
@@ -521,41 +527,49 @@ La fonction prend trois arguments :
 .main-container .middle-content .restaurants {
   display: flex;
   flex-direction: column;
-  align-items: left;
   justify-content: space-evenly;
+  align-items: center;
+  align-items: flex-start;
+  width: 100%;
   height: 75rem;
+  background-color: #f6f6f6;
 }
 .main-container .middle-content .restaurants .restaurants__title {
   padding-left: 1rem;
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card {
-  position: relative;
-  height: 275px;
+.main-container .middle-content .restaurants .restaurants__container {
+  width: 100%;
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details {
+.main-container .middle-content .restaurants .restaurants__container .restaurants__card {
+  max-width: 375px;
+  margin: auto;
+  position: relative;
+  height: 17.1875rem;
+}
+.main-container .middle-content .restaurants .restaurants__container .restaurants__card .restaurants__link .restaurants__card-details {
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  height: 70px;
+  height: 4.375rem;
   padding: 0 0.8rem 0 0.8rem;
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header {
+.main-container .middle-content .restaurants .restaurants__container .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header .restaurants__card-heart-container {
+.main-container .middle-content .restaurants .restaurants__container .restaurants__card .restaurants__link .restaurants__card-details .restaurants__card-header .restaurants__card-heart-container {
   position: relative;
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .card {
+.main-container .middle-content .restaurants .restaurants__container .card {
   border-radius: 15px;
   padding: 1rem; /* 5px */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.main-container .middle-content .restaurants .restaurants__container .restaurants__cards-set .card img {
+.main-container .middle-content .restaurants .restaurants__container .card img {
   width: 100%;
-  height: 190px;
+  height: 11.875rem;
   object-fit: cover;
   object-position: 50% 60%;
   border-radius: 10px 10px 0 0;
@@ -563,16 +577,65 @@ La fonction prend trois arguments :
 }
 
 @media screen and (min-width: 1024px) {
+  .common-width, .main-container .middle-content .restaurants .restaurants__title, .main-container .middle-content .restaurants, .main-container .middle-content .steps {
+    width: 68.75rem;
+    margin: auto;
+  }
   .main-container {
-    max-width: 1440px;
+    max-width: 90rem;
+  }
+  .main-container .middle-content .intro .intro__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 13.75rem;
+  }
+  .main-container .middle-content .intro .intro__container .intro__title {
+    width: 41.875rem;
+    font-size: 2.5rem;
+    line-height: 46.88px;
+  }
+  .main-container .middle-content .intro .intro__container .intro__subtitle {
+    width: 41.875rem;
+  }
+  .main-container .middle-content .steps {
+    display: flex;
+    flex-direction: column;
+    height: 14.25rem;
+    padding-top: 3rem;
   }
   .main-container .middle-content .steps .step__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
-    height: 80px;
-    width: 1100px;
+    height: 5rem;
+    width: 100%;
+  }
+  .main-container .middle-content .restaurants {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 45rem;
+  }
+  .main-container .middle-content .restaurants .restaurants__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40rem;
+  }
+  .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 20rem;
+    margin: auto;
+  }
+  .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-row .restaurants__card {
+    width: 30.625rem;
   }
 }
 
