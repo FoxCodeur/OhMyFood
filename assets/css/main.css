@@ -345,7 +345,7 @@ lente, qui accélère ensuite, puis ralentie */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 63px;
+  height: 70px;
 }
 .header .header__logo-container {
   display: flex;
@@ -378,6 +378,26 @@ La fonction prend trois arguments :
 .footer .footer__links .footer__link-item--restaurant i,
 .footer .footer__links .footer__link-item--partenaire i {
   margin-right: 0.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: none;
+    justify-content: space-between;
+    padding: 3rem 5rem; /* Plus d'espacement à l'intérieur du footer */
+  }
+  .footer .footer__logo {
+    width: 139px;
+  }
+  .footer .footer__links {
+    width: 661px;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .main-container {
@@ -534,14 +554,11 @@ La fonction prend trois arguments :
   height: 75rem;
   background-color: #f6f6f6;
 }
-.main-container .middle-content .restaurants .restaurants__title {
-  padding-left: 1rem;
-}
 .main-container .middle-content .restaurants .restaurants__container {
   width: 100%;
 }
 .main-container .middle-content .restaurants .restaurants__container .restaurants__card {
-  max-width: 375px;
+  width: 375px;
   margin: auto;
   position: relative;
   height: 17.1875rem;
@@ -582,7 +599,12 @@ La fonction prend trois arguments :
     margin: auto;
   }
   .main-container {
+    width: 100%;
     max-width: 90rem;
+    margin: 0 auto;
+  }
+  .main-container .middle-content {
+    height: 1115px;
   }
   .main-container .middle-content .intro .intro__container {
     display: flex;
@@ -602,7 +624,7 @@ La fonction prend trois arguments :
   .main-container .middle-content .steps {
     display: flex;
     flex-direction: column;
-    height: 14.25rem;
+    height: 13.25rem;
     padding-top: 3rem;
   }
   .main-container .middle-content .steps .step__container {
@@ -614,28 +636,39 @@ La fonction prend trois arguments :
     width: 100%;
   }
   .main-container .middle-content .restaurants {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    height: 45rem;
+    height: 39rem;
+  }
+  .main-container .middle-content .restaurants .restaurants__title {
+    padding-top: 2rem;
   }
   .main-container .middle-content .restaurants .restaurants__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 40rem;
+    width: 100%;
+    height: 35rem;
   }
   .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-row {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 90%;
-    height: 20rem;
+    max-width: 100%;
+    width: 78rem;
     margin: auto;
   }
   .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-row .restaurants__card {
-    width: 30.625rem;
+    width: 500px;
+    height: 14rem;
+  }
+  .main-container .middle-content .restaurants .restaurants__container .restaurants__cards-row .card img {
+    width: 100%;
+    height: 9rem;
+    object-fit: cover;
+    object-position: 50% 60%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
   }
 }
 
