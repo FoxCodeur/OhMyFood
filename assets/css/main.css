@@ -560,6 +560,10 @@ La fonction prend trois arguments :
   position: relative;
   cursor: pointer;
 }
+.main-container .middle-content .steps .step__container .step__item:hover {
+  background: white;
+  box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
+}
 .main-container .middle-content .steps .step__container .step__item-number::before {
   content: attr(data-step);
   position: absolute;
@@ -718,11 +722,6 @@ La fonction prend trois arguments :
     width: 100%;
     margin: auto;
   }
-}
-.restaurant1 .main-container {
-  background-color: lightblue;
-  padding: 2rem;
-  border: 1px solid #ccc;
 }
 
 /*# sourceMappingURL=main.css.map */
