@@ -600,6 +600,7 @@ La fonction prend trois arguments :
   transform: translateY(-50%);
   margin-left: 2rem;
   color: #7e7e7e;
+  font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 .main-container .middle-content .steps .step__container .step__item-content-1::before {
