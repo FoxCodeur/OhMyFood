@@ -173,3 +173,18 @@
   border-radius: 10px 10px 0 0;
   overflow: hidden;
 }
+
+// mixins pour les media queries
+// @mixin media-query($size) : Ce mixin prend un paramètre $size qui définit le type de point de rupture que tu veux appliquer.
+// @content : La directive @content permet de définir des styles à l'intérieur du mixin qui seront ensuite injectés dans la règle du media query.
+@mixin media-query($size) {
+  @if $size == desktop {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+}

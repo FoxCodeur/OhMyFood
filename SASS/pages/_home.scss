@@ -6,11 +6,20 @@
   position: relative;
   width: 100%;
   margin: auto;
+  // responsive desktop
+  @include media-query(desktop) {
+    width: 100%;
+    max-width: 90rem; // 1440px
+  }
 
   // Contenu principal
   .middle-content {
     @include flex-column;
     width: 100%;
+    // responsive desktop
+    @include media-query(desktop) {
+      height: 69.69rem; // 1100px
+    }
 
     .location {
       @include flex-center;
@@ -26,14 +35,29 @@
         height: 18.75rem; // 300px
         text-align: center;
         background-color: $color-background;
+        // responsive desktop
+        @include media-query(desktop) {
+          @include flex-column-evenly;
+          height: 13.75rem; // 220px
+        }
 
         .intro__title {
           padding: 0 0.625rem 0.5rem 0.625rem; // 10px 8px 10px
           width: 17.1875rem; // 275px
+          // responsive desktop
+          @include media-query(desktop) {
+            width: 41.875rem; // 670px
+            font-size: 2.5rem; // 40px
+            line-height: 46.88px;
+          }
         }
 
         .intro__subtitle {
           width: 19.6875rem; // 315px
+          // responsive desktop
+          @include media-query(desktop) {
+            width: 41.875rem; // 670px
+          }
         }
 
         .intro__button-container {
@@ -47,11 +71,25 @@
       align-items: flex-start;
       margin: auto;
       height: 25rem; // 390px
+      // responsive desktop
+      @include media-query(desktop) {
+        @extend .common-width;
+        @include flex-column;
+        height: 13.25rem; //212px
+        padding-top: 3rem;
+      }
 
       .step__container {
         @include flex-column-between;
         margin-left: 1rem;
         height: 17rem; // 300px
+        // responsive desktop
+        @include media-query(desktop) {
+          @include flex-around;
+          margin: auto;
+          height: 5rem; // 80px
+          width: 100%;
+        }
 
         .step__item {
           @include steps-style;
@@ -133,28 +171,60 @@
       width: 100%;
       height: 75rem;
       background-color: $color-background;
+      // responsive desktop
+      @include media-query(desktop) {
+        @extend .common-width;
+        width: 100%;
+        height: 39rem;
+      }
       .restaurants__title {
-        // padding-left: 1rem;
+        // responsive desktop
+        @include media-query(desktop) {
+          padding-top: 2rem;
+          @extend .common-width;
+        }
       }
       .restaurants__container {
         width: 100%;
-        .restaurants__card {
-          width: 375px;
-          margin: auto;
-          position: relative;
-          height: 17.1875rem; // 275px
+        // responsive desktop
+        @include media-query(desktop) {
+          @include flex-column-between;
+          width: 100%;
+          height: 35rem;
+        }
+        .restaurants__cards-row {
+          // responsive desktop
+          @include media-query(desktop) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            max-width: 100%;
+            width: 78rem;
+            margin: auto;
+          }
+          .restaurants__card {
+            width: 375px;
+            margin: auto;
+            position: relative;
+            height: 17.1875rem; // 275px
+            // responsive desktop
+            @include media-query(desktop) {
+              width: 500px;
+              height: 15.5rem;
+            }
 
-          .restaurants__link {
-            .restaurants__card-details {
-              @include flex-column-adjustable(left, center);
-              height: 4.375rem; // 70px
-              padding: 0 0.8rem 0 0.8rem;
+            .restaurants__link {
+              .restaurants__card-details {
+                @include flex-column-adjustable(left, center);
+                height: 4.375rem; // 70px
+                padding: 0 0.8rem 0 0.8rem;
 
-              .restaurants__card-header {
-                @include flex-between;
+                .restaurants__card-header {
+                  @include flex-between;
 
-                .restaurants__card-heart-container {
-                  position: relative;
+                  .restaurants__card-heart-container {
+                    position: relative;
+                  }
                 }
               }
             }
@@ -163,9 +233,14 @@
 
         .card {
           @include card-style;
-
           & img {
             @include card-img-style(100%, 11.875rem, 50% 60%); //190px
+          }
+          // responsive desktop
+          @include media-query(desktop) {
+            & img {
+              @include card-img-style(100%, 10.5rem, 50% 60%); //190px
+            }
           }
         }
       }
@@ -173,81 +248,10 @@
   }
 }
 
-// Styles spécifiques pour les écrans desktop
 @media screen and (min-width: 1024px) {
-  // Styles communs pour steps et restaurants
   .common-width {
     width: 68.75rem; // 1100px
     margin: auto;
   }
   // ----------------------------------------
-  .main-container {
-    width: 100%;
-    max-width: 90rem; // 1440px
-    margin: 0 auto; // Centrer le conteneur
-    .middle-content {
-      height: 1115px;
-      .intro {
-        .intro__container {
-          @include flex-column-evenly;
-          height: 13.75rem; // 220px
-          .intro__title {
-            width: 41.875rem; // 670px
-            font-size: 2.5rem; // 40px
-            line-height: 46.88px;
-          }
-          .intro__subtitle {
-            width: 41.875rem; // 670px
-          }
-        }
-      }
-      .steps {
-        @extend .common-width;
-        @include flex-column;
-        height: 13.25rem;
-        padding-top: 3rem;
-        // border: 1px solid black;
-        .step__container {
-          @include flex-around;
-          margin: auto;
-          height: 5rem; // 80px
-          width: 100%;
-          // border: 1px solid black;
-        }
-      }
-      .restaurants {
-        @extend .common-width;
-        width: 100%;
-        height: 39rem;
-
-        .restaurants__title {
-          padding-top: 2rem;
-          @extend .common-width;
-        }
-        .restaurants__container {
-          @include flex-column-between;
-          width: 100%;
-          height: 35rem;
-          .restaurants__cards-row {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            max-width: 100%;
-            width: 78rem;
-            margin: auto;
-
-            .restaurants__card {
-              width: 500px;
-              height: 15.5rem;
-            }
-            .card {
-              & img {
-                @include card-img-style(100%, 10.5rem, 50% 60%); //190px
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }

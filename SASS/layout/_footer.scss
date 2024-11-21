@@ -34,8 +34,17 @@
       width: 90%;
       display: flex;
       @include flex-row--adjustable(center, flex-end);
-      & .footer__link-item--restaurant,
-      & .footer__link-item--partenaire {
+      .footer__link-item--partenaire {
+        & i {
+          margin-left: 0.6rem;
+        }
+      }
+      .footer__link-item:nth-child(3) {
+        margin-left: 3rem;
+        margin-right: 0.6rem;
+      }
+      .footer__link-item:nth-child(4) {
+        margin-right: 3rem;
       }
     }
   }
