@@ -8,42 +8,51 @@
   color: white;
   padding: 1rem 2rem;
 
+  // Responsive desktop
+  @include media-query(desktop) {
+    width: 100%;
+    height: 114px;
+    @include flex-row-reverse-adjustable(center, space-evenly);
+    padding: 3rem 5rem;
+  }
+
+  .footer__logo {
+    @include media-query(desktop) {
+      width: 10%;
+    }
+  }
+
   .footer__links {
     @include flex-column;
     justify-content: space-between;
     height: 99px;
 
+    @include media-query(desktop) {
+      width: 90%;
+      display: flex;
+      @include flex-row--adjustable(center, flex-end);
+    }
+
     .footer__link-item--restaurant,
     .footer__link-item--partenaire {
       & i {
         margin-right: 0.5rem;
-      }
-    }
-  }
 
-  // Appliquer les changements pour grand écran
-  @media screen and (min-width: 1024px) {
-    width: 100%;
-    height: 114px;
-    @include flex-row-reverse-adjustable(center, space-evenly);
-    padding: 3rem 5rem; /* Plus d'espacement à l'intérieur du footer */
-    .footer__logo {
-      width: 10%;
-    }
-    .footer__links {
-      width: 90%;
-      display: flex;
-      @include flex-row--adjustable(center, flex-end);
-      .footer__link-item--partenaire {
-        & i {
+        @media screen and (min-width: 1024px) {
           margin-left: 0.6rem;
         }
       }
-      .footer__link-item:nth-child(3) {
+    }
+
+    .footer__link-item:nth-child(3) {
+      @media screen and (min-width: 1024px) {
         margin-left: 3rem;
         margin-right: 0.6rem;
       }
-      .footer__link-item:nth-child(4) {
+    }
+
+    .footer__link-item:nth-child(4) {
+      @media screen and (min-width: 1024px) {
         margin-right: 3rem;
       }
     }

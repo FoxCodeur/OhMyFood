@@ -369,16 +369,6 @@ La fonction prend trois arguments :
   color: white;
   padding: 1rem 2rem;
 }
-.footer .footer__links {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 99px;
-}
-.footer .footer__links .footer__link-item--restaurant i,
-.footer .footer__links .footer__link-item--partenaire i {
-  margin-right: 0.5rem;
-}
 @media screen and (min-width: 1024px) {
   .footer {
     width: 100%;
@@ -387,11 +377,21 @@ La fonction prend trois arguments :
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
-    padding: 3rem 5rem; /* Plus d'espacement à l'intérieur du footer */
+    padding: 3rem 5rem;
   }
+}
+@media screen and (min-width: 1024px) {
   .footer .footer__logo {
     width: 10%;
   }
+}
+.footer .footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 99px;
+}
+@media screen and (min-width: 1024px) {
   .footer .footer__links {
     width: 90%;
     display: flex;
@@ -400,13 +400,24 @@ La fonction prend trois arguments :
     align-items: center;
     justify-content: flex-end;
   }
+}
+.footer .footer__links .footer__link-item--restaurant i,
+.footer .footer__links .footer__link-item--partenaire i {
+  margin-right: 0.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer__links .footer__link-item--restaurant i,
   .footer .footer__links .footer__link-item--partenaire i {
     margin-left: 0.6rem;
   }
+}
+@media screen and (min-width: 1024px) {
   .footer .footer__links .footer__link-item:nth-child(3) {
     margin-left: 3rem;
     margin-right: 0.6rem;
   }
+}
+@media screen and (min-width: 1024px) {
   .footer .footer__links .footer__link-item:nth-child(4) {
     margin-right: 3rem;
   }
@@ -704,7 +715,7 @@ La fonction prend trois arguments :
 
 @media screen and (min-width: 1024px) {
   .common-width, .main-container .middle-content .steps, .main-container .middle-content .restaurants, .main-container .middle-content .restaurants .restaurants__title {
-    width: 68.75rem;
+    width: 100%;
     margin: auto;
   }
 }
