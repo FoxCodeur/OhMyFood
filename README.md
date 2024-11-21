@@ -223,4 +223,6 @@ Cette section détaille la création des composants pour le formulaire et les bo
 
 ------------------------------------------------------------------------------------
 Mise en place des pages restaurants.
-
+Création des 4 fichiers html et du fichier restaurants.scss dont le style sera commun à toutes les pages.
+intégration de @use "./pages/restaurants"; dans main.scss
+ajout des ancres dans index.html.

@@ -719,5 +719,10 @@ La fonction prend trois arguments :
     margin: auto;
   }
 }
+.restaurant1 .main-container {
+  background-color: lightblue;
+  padding: 2rem;
+  border: 1px solid #ccc;
+}
 
 /*# sourceMappingURL=main.css.map */
