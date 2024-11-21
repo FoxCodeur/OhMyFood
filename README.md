@@ -191,7 +191,7 @@ Application du style général sur le fichier index.html !
 
     Pour chaque niveau de titre et de paragraphe dans le fichier HTML, vous appliquerez les classes appropriées afin d'associer les polices et tailles de texte définies. Cela permet de garantir une typographie cohérente et bien structurée sur l'ensemble du site.  
     
-    On nous a fournis des informations à propos des polices utilisés sur le site eton sait donc ceci: 
+    On nous a fournis des informations à propos des polices utilisés sur le site et on sait donc ceci: 
 
     Logo et titres : Shrikhand
     Texte : Roboto
@@ -199,7 +199,7 @@ Application du style général sur le fichier index.html !
 J'ai crée deux variables:
     $font-logo: 'Shrikhand', cursive;
     $font-text: 'Roboto', sans-serif;
-Ensuite on crée l'ensemble des mixins. (pour tous les cas de flexbox mais aussi les 4 boutons)
+Ensuite on crée l'ensemble des mixins. (pour tous les cas de flexbox mais aussi les 4 boutons), et les mixins media queries.
  Les flexbox s'appliquent sur toute la page d'accueil.
 
  Notice de création des composants
@@ -221,5 +221,6 @@ Cette section détaille la création des composants pour le formulaire et les bo
     Étape 2 : Styles CSS
     Application des styles en utilisant des mixins, des variables, et des classes CSS pour harmoniser le design des boutons.
 
-
+------------------------------------------------------------------------------------
+Mise en place des pages restaurants.
 
