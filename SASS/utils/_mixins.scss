@@ -111,11 +111,20 @@
   justify-content: $justify-content;
 }
 
-@mixin flex-row-adjustable(
+@mixin flex-row-reverse-adjustable(
   $align-items: center,
   $justify-content: space-evenly
 ) {
   @include flex-row-reverse;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-row--adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-row;
   align-items: $align-items;
   justify-content: $justify-content;
 }

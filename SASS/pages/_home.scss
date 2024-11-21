@@ -238,11 +238,11 @@
 
             .restaurants__card {
               width: 500px;
-              height: 14rem;
+              height: 15.5rem;
             }
             .card {
               & img {
-                @include card-img-style(100%, 9rem, 50% 60%); //190px
+                @include card-img-style(100%, 10.5rem, 50% 60%); //190px
               }
             }
           }

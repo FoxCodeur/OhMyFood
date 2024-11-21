@@ -24,15 +24,19 @@
   // Appliquer les changements pour grand écran
   @media screen and (min-width: 1024px) {
     width: 100%;
-    @include flex-row-adjustable(none, space-between);
+    height: 114px;
+    @include flex-row-reverse-adjustable(center, space-evenly);
     padding: 3rem 5rem; /* Plus d'espacement à l'intérieur du footer */
     .footer__logo {
-      width: 139px;
+      width: 10%;
     }
     .footer__links {
-      width: 661px;
+      width: 90%;
       display: flex;
-      @include flex-evenly;
+      @include flex-row--adjustable(center, flex-end);
+      & .footer__link-item--restaurant,
+      & .footer__link-item--partenaire {
+      }
     }
   }
 }
