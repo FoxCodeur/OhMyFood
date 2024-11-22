@@ -173,8 +173,15 @@ a {
 
 .double-xl-font {
   font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 40.82px;
+  font-style: italic;
+}
+
+.xxxl-font {
+  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 46.88px;
+  line-height: 37.5px;
 }
 
 .xxl-font {
@@ -186,6 +193,12 @@ a {
 .xl-font {
   font-size: 1.125rem;
   font-weight: 700;
+  line-height: 21.09px;
+}
+
+.xl-font-medium {
+  font-size: 1.125rem;
+  font-weight: 500;
   line-height: 21.09px;
 }
 
@@ -204,6 +217,12 @@ a {
 .md-font {
   font-size: 1rem;
   font-weight: 600;
+  line-height: 18.75px;
+}
+
+.md-font-light {
+  font-size: 1rem;
+  font-weight: 300;
   line-height: 18.75px;
 }
 
@@ -345,7 +364,7 @@ lente, qui accélère ensuite, puis ralentie */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 65px;
 }
 .header .header__logo-container {
   display: flex;
@@ -354,11 +373,12 @@ lente, qui accélère ensuite, puis ralentie */
   width: 100%;
 }
 .header .header__logo-container .header__logo {
-  width: clamp(200px, 50%, 200px); /* Fonction clamp()
-La fonction prend trois arguments :
-    valeur min : La plus petite valeur que l'élément peut avoir.
-    valeur préférée : La valeur idéale (généralement fluide ou relative, comme un pourcentage ou une unité vw).
-    valeur max : La plus grande valeur que l'élément peut avoir. */
+  width: clamp(200px, 50%, 200px);
+  /* Fonction clamp()
+  La fonction prend trois arguments :
+      valeur min : La plus petite valeur que l'élément peut avoir.
+      valeur préférée : La valeur idéale (généralement fluide ou relative, comme un pourcentage ou une unité vw).
+      valeur max : La plus grande valeur que l'élément peut avoir. */
 }
 
 .footer {
@@ -432,7 +452,6 @@ La fonction prend trois arguments :
 }
 @media screen and (min-width: 1024px) {
   .main-container {
-    width: 100%;
     max-width: 90rem;
   }
 }
@@ -723,6 +742,53 @@ La fonction prend trois arguments :
     width: 100%;
     margin: auto;
   }
+}
+.restaurants__main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__main-container {
+    max-width: 90rem;
+  }
+}
+.restaurants__main-container .restaurants__main-content .restaurants__introduction-image {
+  z-index: 1;
+}
+.restaurants__main-container .restaurants__main-content .restaurants__menu {
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+  position: relative; /* Permet de la déplacer sans affecter les autres éléments */
+  z-index: 2;
+  margin-top: -12%; /* Fait remonter la section sur l'image */
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.restaurants-header {
+  height: 65px;
+}
+.restaurants-header .restaurants-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  padding: 0.9rem;
+}
+.restaurants-header .restaurants-header__wrapper .restaurants-header__back-content {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+.restaurants-header .restaurants-header__wrapper .restaurants-header__logo-container {
+  width: 90%;
+}
+.restaurants-header .restaurants-header__wrapper .restaurants-header__logo-container .restaurants-header__logo {
+  width: clamp(200px, 50%, 200px);
+  margin: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

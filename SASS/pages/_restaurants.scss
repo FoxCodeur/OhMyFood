@@ -1,2 +1,24 @@
 @use "../utils/mixins" as *;
 @use "../utils/variables" as *;
+.restaurants__main-container {
+  @include flex-column;
+  width: 100%;
+  margin: auto;
+  // responsive desktop
+  @include media-query(desktop) {
+    max-width: 90rem; // 1440px
+  }
+  .restaurants__main-content {
+    .restaurants__introduction-image {
+      z-index: 1;
+    }
+    .restaurants__menu {
+      background-color: $color-background;
+      border-radius: 20px 20px 0 0;
+      position: relative; /* Permet de la déplacer sans affecter les autres éléments */
+      z-index: 2;
+      margin-top: -12%; /* Fait remonter la section sur l'image */
+      padding: 2rem 1rem 2rem 1rem;
+    }
+  }
+}

@@ -226,3 +226,9 @@ Mise en place des pages restaurants.
 Création des 4 fichiers html et du fichier restaurants.scss dont le style sera commun à toutes les pages.
 intégration de @use "./pages/restaurants"; dans main.scss
 ajout des ancres dans index.html.
+Ensuite on procède de la même manière que pour l'index.html.
+On définit la structure html des 4 pages.
+on intègres les fichiers médias.
+On crée les variables et mixins supplémentaires.
+On applique le style.
+Nous sommes en mobile first, donc on fait en sorte que les pages soient responsive sur grand écran.

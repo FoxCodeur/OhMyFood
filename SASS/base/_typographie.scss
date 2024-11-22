@@ -21,8 +21,14 @@ a {
 }
 .double-xl-font {
   font-size: variables.$font-double-xl; // 2.5rem (40px)
+  font-weight: 400;
+  line-height: 40.82px;
+  font-style: italic;
+}
+.xxxl-font {
+  font-size: variables.$font-xxxl; // 1.75rem (// 28px)
   font-weight: 700;
-  line-height: 46.88px;
+  line-height: 37.5px;
 }
 .xxl-font {
   font-size: variables.$font-xxl; // 1.5rem (24px)
@@ -33,6 +39,11 @@ a {
 .xl-font {
   font-size: variables.$font-xl; // 1.125rem (18px)
   font-weight: 700;
+  line-height: 21.09px;
+}
+.xl-font-medium {
+  font-size: variables.$font-xl; // 1.125rem (18px)
+  font-weight: 500;
   line-height: 21.09px;
 }
 .xl-font-light {
@@ -50,6 +61,11 @@ a {
 .md-font {
   font-size: variables.$font-md; // 1rem (16px)
   font-weight: 600;
+  line-height: 18.75px;
+}
+.md-font-light {
+  font-size: variables.$font-md; // 1rem (16px)
+  font-weight: 300;
   line-height: 18.75px;
 }
 .md-font-a {

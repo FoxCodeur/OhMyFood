@@ -8,7 +8,7 @@
   margin: auto;
   // responsive desktop
   @include media-query(desktop) {
-    width: 100%;
+    // width: 100%;
     max-width: 90rem; // 1440px
   }
 
