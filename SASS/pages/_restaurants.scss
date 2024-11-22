@@ -13,6 +13,8 @@
       z-index: 1;
     }
     .restaurants__menu {
+      @include flex-column-adjustable(none, space-between);
+      height: 1080px;
       background-color: $color-background;
       border-radius: 20px 20px 0 0;
       position: relative; /* Permet de la déplacer sans affecter les autres éléments */
@@ -36,11 +38,18 @@
       }
       .restaurants__menu-details {
         .restaurants__menu-section {
+          @include flex-column-adjustable(none, space-around);
+          height: 280px;
+          margin-bottom: 1.5rem;
           .restaurants__menu-title {
             @include half-border-bottom;
           }
           .restaurants__menu-item {
+            @include flex-column-adjustable(none, center);
             @include menu-item-style--adjustable(330px, 69px);
+            .restaurants__menu-item-details {
+              @include flex-between;
+            }
           }
         }
       }
