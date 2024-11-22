@@ -1,0 +1,24 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.restaurants-header {
+  height: 65px;
+  .restaurants-header__wrapper {
+    @include flex-around;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    padding: 0.9rem;
+    .restaurants-header__back-content {
+      display: flex;
+      justify-content: center;
+      width: 10%;
+    }
+    .restaurants-header__logo-container {
+      width: 90%;
+      .restaurants-header__logo {
+        width: clamp(200px, 50%, 200px);
+        margin: auto;
+      }
+    }
+  }
+}

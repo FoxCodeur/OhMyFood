@@ -110,6 +110,42 @@ Maintenant, si tu modifies des fichiers SCSS, par exemple _home.scss dans le dos
 ----------------------------------------------------------------------------- 
 9. intégration de la librairie fontawesome et ajout des deux font family, Shrikhand et Roboto. 
 ----------------------------------------------------------------------------
+
+Les branches utilisé pour commiter le projet
+    develop-ohmyfood
+
+    Description :
+    Cette branche est utilisée comme branche principale pour le développement actif du projet OhMyFood.
+    Elle représente un état stable du projet, incluant les nouvelles fonctionnalités, les corrections de bugs, et les mises à jour en cours. C'est à partir de cette branche que d'autres branches spécifiques (fonctionnalités, fixes) sont créées.
+
+    Utilisation :
+        Base pour toutes les branches de fonctionnalité (par ex., feature/home-section).
+        Fusion de toutes les branches terminées pour unifier le travail.
+        Tests intensifs avant de fusionner dans main ou une branche de production.
+
+    feature/home-section
+
+    Description :
+    Cette branche est spécifique à une fonctionnalité du projet : la section Home (page d'accueil). Elle sert à développer tout ce qui concerne cette partie, comme les styles SCSS, le HTML de la section, ou toute autre configuration.
+
+    Utilisation :
+        Ajouter, modifier ou améliorer les éléments spécifiques à la section d'accueil.
+        Tester indépendamment cette fonctionnalité avant de la fusionner dans develop-ohmyfood.
+        Référencer cette branche dans les commits pour identifier clairement que le travail concerne la section d'accueil.
+
+    feature/home-section/version-tablet
+
+    Description :
+    Cette branche est un sous-dérivé de la branche feature/home-section, dédiée spécifiquement à l'adaptation responsive pour tablettes de la section Home.
+    Cela permet de séparer les tâches liées aux différents écrans, facilitant le suivi des modifications et réduisant les risques de conflit dans le code.
+
+    Utilisation :
+        Implémenter les media queries et ajuster le CSS ou SCSS pour une version tablette (écrans entre 768px et 1024px par exemple).
+        Tester uniquement les changements pour la version tablette, sans toucher aux autres versions (mobile ou desktop).
+        Une fois terminé, fusionner cette branche dans feature/home-section, qui sera ensuite fusionnée dans develop-ohmyfood.
+
+
+----------------------------------------------------------------------------
 10. Implémentation de la page d'accueil "OhMyFood"
 Structure du fichier index.html
 
@@ -155,7 +191,7 @@ Application du style général sur le fichier index.html !
 
     Pour chaque niveau de titre et de paragraphe dans le fichier HTML, vous appliquerez les classes appropriées afin d'associer les polices et tailles de texte définies. Cela permet de garantir une typographie cohérente et bien structurée sur l'ensemble du site.  
     
-    On nous a fournis des informations à propos des polices utilisés sur le site eton sait donc ceci: 
+    On nous a fournis des informations à propos des polices utilisés sur le site et on sait donc ceci: 
 
     Logo et titres : Shrikhand
     Texte : Roboto
@@ -163,7 +199,7 @@ Application du style général sur le fichier index.html !
 J'ai crée deux variables:
     $font-logo: 'Shrikhand', cursive;
     $font-text: 'Roboto', sans-serif;
-Ensuite on crée l'ensemble des mixins. (pour tous les cas de flexbox mais aussi les 4 boutons)
+Ensuite on crée l'ensemble des mixins. (pour tous les cas de flexbox mais aussi les 4 boutons), et les mixins media queries.
  Les flexbox s'appliquent sur toute la page d'accueil.
 
  Notice de création des composants
@@ -184,3 +220,15 @@ Cette section détaille la création des composants pour le formulaire et les bo
 
     Étape 2 : Styles CSS
     Application des styles en utilisant des mixins, des variables, et des classes CSS pour harmoniser le design des boutons.
+
+------------------------------------------------------------------------------------
+Mise en place des pages restaurants.
+Création des 4 fichiers html et du fichier restaurants.scss dont le style sera commun à toutes les pages.
+intégration de @use "./pages/restaurants"; dans main.scss
+ajout des ancres dans index.html.
+Ensuite on procède de la même manière que pour l'index.html.
+On définit la structure html des 4 pages.
+on intègres les fichiers médias.
+On crée les variables et mixins supplémentaires.
+On applique le style.
+Nous sommes en mobile first, donc on fait en sorte que les pages soient responsive sur grand écran.
