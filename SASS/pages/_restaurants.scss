@@ -11,6 +11,13 @@
   .restaurants__main-content {
     .restaurants__introduction-image {
       z-index: 1;
+      // responsive desktop
+      @include media-query(desktop) {
+        width: 100%; /* Ajuste l'image à la largeur de son élément parent */
+        height: 350px; /* La hauteur de l'image (ajustez selon vos besoins) */
+        object-fit: cover; /* Rognage de l'image en conservant son aspect */
+        object-position: 50% 55%; /* Centre le contenu de l'image */
+      }
     }
     .restaurants__menu {
       @include flex-column-adjustable(none, space-between);
@@ -21,6 +28,12 @@
       z-index: 2;
       margin-top: -12%; /* Fait remonter la section sur l'image */
       padding: 2rem 1rem 2rem 1rem;
+      // responsive desktop
+      @include media-query(desktop) {
+        width: 60%;
+        margin: auto;
+        margin-top: -3%; /* Fait remonter la section sur l'image */
+      }
       .restaurants__menu-header {
         position: relative;
         @include flex-row--adjustable(center, space-between);
@@ -45,8 +58,13 @@
             @include half-border-bottom;
           }
           .restaurants__menu-item {
+            margin: auto;
             @include flex-column-adjustable(none, center);
             @include menu-item-style--adjustable(330px, 69px);
+            // responsive desktop
+            @include media-query(desktop) {
+              @include menu-item-style--adjustable(640px, 69px);
+            }
             .restaurants__menu-item-details {
               @include flex-between;
             }
