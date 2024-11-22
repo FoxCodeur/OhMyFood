@@ -225,6 +225,12 @@
 
                   .restaurants__card-heart-container {
                     position: relative;
+
+                    .restaurants__card-heart-icon {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                    }
                   }
                 }
               }

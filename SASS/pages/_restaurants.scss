@@ -19,6 +19,37 @@
       z-index: 2;
       margin-top: -12%; /* Fait remonter la section sur l'image */
       padding: 2rem 1rem 2rem 1rem;
+      .restaurants__menu-header {
+        position: relative;
+        @include flex-row--adjustable(center, space-between);
+        .restaurants__card-heart-container {
+          position: relative;
+          .restaurants__card-heart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-right: 2rem;
+            padding-bottom: 0.5rem;
+          }
+        }
+      }
+      .restaurants__menu-details {
+        .restaurants__menu-section {
+          .restaurants__menu-title {
+            @include half-border-bottom;
+          }
+          .restaurants__menu-item {
+            @include menu-item-style--adjustable(330px, 69px);
+          }
+        }
+      }
+      .restaurants__menu-order {
+        @include flex-center;
+        .restaurants__menu-order-button {
+          @include button;
+        }
+      }
     }
   }
 }
