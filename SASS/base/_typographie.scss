@@ -73,6 +73,16 @@ a {
   font-weight: 500;
   line-height: 18.75px;
 }
+.sm-md-font-bold {
+  font-size: variables.$font-sm-md; // 0.937rem (15px)
+  font-weight: 700;
+  line-height: 17.63px;
+}
+.sm-md-font {
+  font-size: variables.$font-sm-md; // 0.937rem (15px)
+  font-weight: 300;
+  line-height: 17.63px;
+}
 
 .sm-font {
   font-size: variables.$font-sm; // 0.875rem (14px)
