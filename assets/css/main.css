@@ -774,8 +774,8 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1024px) {
   .restaurants__main-container .restaurants__main-content .restaurants__introduction-image {
-    width: 100%; /* Ajuste l'image à la largeur de son élément parent */
-    height: 350px; /* La hauteur de l'image (ajustez selon vos besoins) */
+    width: 100%;
+    height: 350px;
     object-fit: cover; /* Rognage de l'image en conservant son aspect */
     object-position: 50% 55%; /* Centre le contenu de l'image */
   }
