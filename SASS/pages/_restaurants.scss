@@ -1,6 +1,7 @@
 @use "../utils/mixins" as *;
 @use "../utils/variables" as *;
 .restaurants__main-container {
+  //mobile first
   @include flex-column;
   width: 100%;
   margin: auto;
@@ -10,18 +11,20 @@
   }
   .restaurants__main-content {
     .restaurants__introduction-image {
+      //mobile first
       z-index: 1;
       // responsive desktop
       @include media-query(desktop) {
         width: 100%;
-        height: 350px;
+        height: 21.875rem; /*350px*/
         object-fit: cover; /* Rognage de l'image en conservant son aspect */
         object-position: 50% 55%; /* Centre le contenu de l'image */
       }
     }
     .restaurants__menu {
+      //mobile first
       @include flex-column-adjustable(none, space-between);
-      height: 1080px;
+      height: 67.5rem; /* 1080px */
       background-color: $color-background;
       border-radius: 20px 20px 0 0;
       position: relative; /* Permet de la déplacer sans affecter les autres éléments */
@@ -37,8 +40,9 @@
         margin-top: -3%; /* Fait remonter la section sur l'image */
       }
       .restaurants__menu-header {
+        //mobile first
         margin: auto;
-        width: 375px;
+        width: 23.43rem; /* 375px */
         position: relative;
         @include flex-row--adjustable(center, space-between);
         // responsive desktop
@@ -58,8 +62,9 @@
       }
       .restaurants__menu-details {
         .restaurants__menu-section {
+          //mobile first
           @include flex-column-adjustable(none, space-around);
-          height: 280px;
+          height: 17.5rem; /* 280px */
           width: 20rem;
           margin: auto;
           margin-bottom: 1.5rem;
@@ -68,27 +73,101 @@
             width: 40rem;
           }
           .restaurants__menu-title {
+            //mobile first
             @include half-border-bottom;
           }
           .restaurants__menu-item {
+            //mobile first
             margin: auto;
             @include flex-column-adjustable(none, center);
             @include menu-item-style--adjustable(330px, 69px);
+            //animation div qui se rétracte
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            overflow: hidden;
+            &::before,
+            &::after {
+              transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            &::before {
+              content: "\f00c"; /* Unicode de l'icône Font Awesome */
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              font-size: 0.75rem; /* 12px */
+              position: absolute;
+              top: 50%;
+              right: -50px; /* Position initiale à l'extérieur à droite */
+              width: 20px;
+              height: 20px;
+              background: white;
+              color: $color-tertiary; /* Couleur de l'icône */
+              text-align: center; /* Centrer horizontalement l'icône */
+              line-height: 20px; /* Centrer verticalement l'icône dans le cercle (réduit) */
+              border-radius: 50%; /* Forme circulaire */
+              z-index: 3; /* Placer l'icône au-dessus du fond */
+              opacity: 0; /* Initialement invisible */
+            }
+
+            &:active::before {
+              transform: translateX(-70px) translateY(-50%); /* Déplacer l'icône vers la gauche */
+              opacity: 1; /* Rendre l'icône visible */
+            }
+
+            &::after {
+              content: ""; /* Nécessaire pour que le pseudo-élément apparaisse */
+              position: absolute;
+              top: 0; /* Positionné en haut du parent */
+              right: -3.4375rem; /* 55px */
+              width: 3.4375rem; /* 55 px */
+              height: 100%; /* Hauteur de l'élément */
+              background-color: $color-tertiary;
+              z-index: 2;
+              opacity: 0;
+              transform: translateX(100%); /* Position initiale à l'extérieur */
+            }
+
+            &:active::after {
+              opacity: 1; /* Rendre la bande visible */
+              transform: translateX(
+                -50px
+              ); /* Déplacer la bande à sa position d'origine (à l'intérieur) */
+            }
             // responsive desktop
             @include media-query(desktop) {
               @include menu-item-style--adjustable(640px, 69px);
             }
+            // Placer :hover avant .restaurants__menu-item-price est une façon de
+            // dire que l'état de survol s'applique à l'élément parent
+            //(.restaurants__menu-item) et que cela doit déclencher un changement
+            //sur son enfant (.restaurants__menu-item-price).
+            &:active .restaurants__menu-item-price {
+              transform: translateX(
+                -2.5rem
+              ); /* Déplacement 40px vers la gauche */
+              opacity: 1; /* Facultatif pour ajuster la visibilité */
+            }
+
             .restaurants__menu-item-details {
+              //mobile first
               @include flex-between;
+              .restaurants__menu-item-description {
+                white-space: nowrap;
+              }
+              .restaurants__menu-item-price {
+                transition: transform 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
+              }
             }
           }
         }
       }
-      .restaurants__menu-order {
-        @include flex-center;
-        .restaurants__menu-order-button {
-          @include button;
-        }
+    }
+    .restaurants__menu-order {
+      //mobile first
+      @include flex-center;
+      .restaurants__menu-order-button {
+        //mobile first
+        @include button;
       }
     }
   }
