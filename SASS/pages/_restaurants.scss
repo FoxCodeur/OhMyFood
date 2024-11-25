@@ -31,19 +31,26 @@
       // responsive desktop
       @include media-query(desktop) {
         width: 60%;
+        height: 70rem;
+        gap: 1rem;
         margin: auto;
         margin-top: -3%; /* Fait remonter la section sur l'image */
       }
       .restaurants__menu-header {
+        margin: auto;
+        width: 375px;
         position: relative;
         @include flex-row--adjustable(center, space-between);
+        // responsive desktop
+        @include media-query(desktop) {
+        }
         .restaurants__card-heart-container {
           position: relative;
           .restaurants__card-heart-icon {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-150%, -50%);
             padding-right: 2rem;
             padding-bottom: 0.5rem;
           }
@@ -53,7 +60,13 @@
         .restaurants__menu-section {
           @include flex-column-adjustable(none, space-around);
           height: 280px;
+          width: 20rem;
+          margin: auto;
           margin-bottom: 1.5rem;
+          // responsive desktop
+          @include media-query(desktop) {
+            width: 40rem;
+          }
           .restaurants__menu-title {
             @include half-border-bottom;
           }

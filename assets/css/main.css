@@ -553,10 +553,9 @@ lente, qui accélère ensuite, puis ralentie */
 @media screen and (min-width: 1024px) {
   .main-container .middle-content .step__container {
     flex-direction: column;
-    align-items: flex-start;
     margin: auto;
     height: 8rem;
-    width: 1000px;
+    width: 1140px;
     gap: 1.5rem;
   }
 }
@@ -569,7 +568,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1024px) {
   .main-container .middle-content .step__container .step__buttons {
-    width: 1053px;
+    width: 1090px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -653,6 +652,7 @@ lente, qui accélère ensuite, puis ralentie */
   color: #9356dc;
 }
 .main-container .middle-content .restaurants__container {
+  position: relative;
   gap: 1rem;
   padding-top: 4rem;
   padding-bottom: 6rem;
@@ -665,8 +665,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1024px) {
   .main-container .middle-content .restaurants__container {
-    width: 100%;
-    height: 39rem;
+    height: 41rem;
   }
 }
 .main-container .middle-content .restaurants__container .restaurants__title {
@@ -676,7 +675,8 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1024px) {
   .main-container .middle-content .restaurants__container .restaurants__title {
-    padding-top: 2rem;
+    margin: 0;
+    align-self: flex-start;
   }
 }
 .main-container .middle-content .restaurants__container .restaurants__cards-row {
@@ -689,7 +689,7 @@ lente, qui accélère ensuite, puis ralentie */
   .main-container .middle-content .restaurants__container .restaurants__cards-row {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     max-width: 100%;
     width: 78rem;
     margin: auto;
@@ -753,7 +753,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 
 @media screen and (min-width: 1024px) {
-  .common-width, .main-container .middle-content .restaurants__container, .main-container .middle-content .restaurants__container .restaurants__title {
+  .common-width {
     width: 100%;
     margin: auto;
   }
@@ -796,11 +796,15 @@ lente, qui accélère ensuite, puis ralentie */
 @media screen and (min-width: 1024px) {
   .restaurants__main-container .restaurants__main-content .restaurants__menu {
     width: 60%;
+    height: 70rem;
+    gap: 1rem;
     margin: auto;
     margin-top: -3%; /* Fait remonter la section sur l'image */
   }
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-header {
+  margin: auto;
+  width: 375px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -814,7 +818,7 @@ lente, qui accélère ensuite, puis ralentie */
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-150%, -50%);
   padding-right: 2rem;
   padding-bottom: 0.5rem;
 }
@@ -824,7 +828,14 @@ lente, qui accélère ensuite, puis ralentie */
   align-items: none;
   justify-content: space-around;
   height: 280px;
+  width: 20rem;
+  margin: auto;
   margin-bottom: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section {
+    width: 40rem;
+  }
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-title {
   position: relative;
