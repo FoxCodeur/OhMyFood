@@ -760,7 +760,7 @@ lente, qui accélère ensuite, puis ralentie */
 .main-container .middle-content .restaurants__container .restaurants__cards-row .restaurants__card .restaurants__link .restaurants__card-details {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: center;
   height: 4.375rem;
   padding: 0 0.8rem 0 0.8rem;
@@ -836,8 +836,8 @@ lente, qui accélère ensuite, puis ralentie */
 .restaurants__main-container .restaurants__main-content .restaurants__menu {
   display: flex;
   flex-direction: column;
-  align-items: none;
   justify-content: space-between;
+  align-items: center;
   height: 67.5rem; /* 1080px */
   background-color: #f6f6f6;
   border-radius: 20px 20px 0 0;
@@ -878,7 +878,7 @@ lente, qui accélère ensuite, puis ralentie */
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section {
   display: flex;
   flex-direction: column;
-  align-items: none;
+  align-items: flex-start;
   justify-content: space-around;
   height: 17.5rem; /* 280px */
   width: 20rem;
@@ -910,8 +910,8 @@ lente, qui accélère ensuite, puis ralentie */
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: none;
   justify-content: center;
+  align-items: center;
   width: 330px;
   height: 69px;
   border-radius: 20px;

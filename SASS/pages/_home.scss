@@ -216,7 +216,7 @@
 
           .restaurants__link {
             .restaurants__card-details {
-              @include flex-column-adjustable(left, center);
+              @include flex-column-adjustable(flex-start, center);
               height: 4.375rem; // 70px
               padding: 0 0.8rem 0 0.8rem;
 

@@ -29,7 +29,7 @@
     }
     .restaurants__menu {
       //mobile first
-      @include flex-column-adjustable(none, space-between);
+      @include flex-column-between;
       height: 67.5rem; /* 1080px */
       background-color: $color-background;
       border-radius: 20px 20px 0 0;
@@ -69,7 +69,7 @@
       .restaurants__menu-details {
         .restaurants__menu-section {
           //mobile first
-          @include flex-column-adjustable(none, space-around);
+          @include flex-column-adjustable(flex-start, space-around);
           height: 17.5rem; /* 280px */
           width: 20rem;
           margin: auto;
@@ -88,7 +88,7 @@
           .restaurants__menu-item {
             //mobile first
             margin: auto;
-            @include flex-column-adjustable(none, center);
+            @include flex-column-center;
             @include menu-item-style--adjustable(330px, 69px);
             //animation div qui se rétracte
             position: relative;
