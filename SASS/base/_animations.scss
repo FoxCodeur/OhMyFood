@@ -102,3 +102,55 @@
     color: transparent; /* Rendre le texte transparent pour voir le fond dégradé */
   }
 }
+// animation les menus qui apparaissent
+
+/* Animation fadeIn commune pour les entrées et les plats */
+.restaurants__menu-item--entree,
+.restaurants__menu-item--plat,
+.restaurants__menu-item--dessert {
+  opacity: 0; /* Initialement invisible */
+  animation: fadeIn 1.5s ease-out forwards; /* Durée de 1,5 seconde */
+}
+
+/* Animation pour les entrées */
+.restaurants__menu-item--entree:nth-of-type(4) {
+  animation-delay: 0.2s; /* Premier élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(3) {
+  animation-delay: 0.4s; /* Deuxième élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(2) {
+  animation-delay: 0.6s; /* Troisième élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(1) {
+  animation-delay: 0.8s; /* Quatrième élément entrée */
+}
+
+/* Animation pour les plats */
+.restaurants__menu-item--plat:nth-of-type(3),
+.restaurants__menu-item--dessert:nth-of-type(3) {
+  animation-delay: 0.2s; /* Premier élément plat */
+}
+
+.restaurants__menu-item--plat:nth-of-type(2),
+.restaurants__menu-item--dessert:nth-of-type(2) {
+  animation-delay: 0.4s; /* Deuxième élément plat */
+}
+
+.restaurants__menu-item--plat:nth-of-type(1),
+.restaurants__menu-item--dessert:nth-of-type(1) {
+  animation-delay: 0.6s; /* Troisième élément plat */
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Début invisible */
+  }
+  100% {
+    opacity: 1; /* Fin visible */
+  }
+}

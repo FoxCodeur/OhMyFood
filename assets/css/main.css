@@ -341,6 +341,56 @@ lente, qui accélère ensuite, puis ralentie */
   color: transparent; /* Rendre le texte transparent pour voir le fond dégradé */
 }
 
+/* Animation fadeIn commune pour les entrées et les plats */
+.restaurants__menu-item--entree,
+.restaurants__menu-item--plat,
+.restaurants__menu-item--dessert {
+  opacity: 0; /* Initialement invisible */
+  animation: fadeIn 1.5s ease-out forwards; /* Durée de 1,5 seconde */
+}
+
+/* Animation pour les entrées */
+.restaurants__menu-item--entree:nth-of-type(4) {
+  animation-delay: 0.2s; /* Premier élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(3) {
+  animation-delay: 0.4s; /* Deuxième élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(2) {
+  animation-delay: 0.6s; /* Troisième élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(1) {
+  animation-delay: 0.8s; /* Quatrième élément entrée */
+}
+
+/* Animation pour les plats */
+.restaurants__menu-item--plat:nth-of-type(3),
+.restaurants__menu-item--dessert:nth-of-type(3) {
+  animation-delay: 0.2s; /* Premier élément plat */
+}
+
+.restaurants__menu-item--plat:nth-of-type(2),
+.restaurants__menu-item--dessert:nth-of-type(2) {
+  animation-delay: 0.4s; /* Deuxième élément plat */
+}
+
+.restaurants__menu-item--plat:nth-of-type(1),
+.restaurants__menu-item--dessert:nth-of-type(1) {
+  animation-delay: 0.6s; /* Troisième élément plat */
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Début invisible */
+  }
+  100% {
+    opacity: 1; /* Fin visible */
+  }
+}
 .badge-highlight {
   position: absolute;
   width: 80px;
@@ -769,9 +819,6 @@ lente, qui accélère ensuite, puis ralentie */
     max-width: 90rem;
   }
 }
-.restaurants__main-container .restaurants__main-content .restaurants__introduction-image {
-  z-index: 1;
-}
 @media screen and (min-width: 1024px) {
   .restaurants__main-container .restaurants__main-content .restaurants__introduction-image {
     width: 100%;
@@ -779,6 +826,12 @@ lente, qui accélère ensuite, puis ralentie */
     object-fit: cover; /* Rognage de l'image en conservant son aspect */
     object-position: 50% 55%; /* Centre le contenu de l'image */
   }
+}
+.restaurants__main-container .restaurants__main-content .restaurants__introduction-image--specific {
+  width: 100%;
+  height: 275px;
+  object-fit: cover; /* Rognage de l'image en conservant son aspect */
+  object-position: 50% 55%; /* Centre le contenu de l'image */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu {
   display: flex;
@@ -896,12 +949,12 @@ lente, qui accélère ensuite, puis ralentie */
   content: ""; /* Nécessaire pour que le pseudo-élément apparaisse */
   position: absolute;
   top: 0; /* Positionné en haut du parent */
-  right: -3.4375rem; /* 55px */
-  width: 3.4375rem; /* 55 px */
+  right: -3.4375rem; /* 55px Initialement à l'extérieur à droite */
+  width: 3.4375rem; /* Largeur de l'élément */
   height: 100%; /* Hauteur de l'élément */
-  background-color: #99e2d0;
-  z-index: 2;
-  opacity: 0;
+  background-color: #99e2d0; /* Fond rouge pour que l'élément soit visible */
+  z-index: 2; /* Pour s'assurer qu'il est visible au-dessus du fond */
+  opacity: 0; /* Initialement invisible */
   transform: translateX(100%); /* Position initiale à l'extérieur */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item:active::after {
@@ -919,7 +972,7 @@ lente, qui accélère ensuite, puis ralentie */
   }
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item:active .restaurants__menu-item-price {
-  transform: translateX(-2.5rem); /* Déplacement 40px vers la gauche */
+  transform: translateX(-40px); /* Déplacement vers la gauche */
   opacity: 1; /* Facultatif pour ajuster la visibilité */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-details {
