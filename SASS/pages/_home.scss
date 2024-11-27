@@ -163,89 +163,95 @@
         }
       }
     }
-
-    .restaurants__container {
-      position: relative;
-      gap: 1rem;
-      padding-top: 4rem;
-      padding-bottom: 6rem;
-      width: 100%;
-      @include flex-column;
-      align-items: flex-start;
-      // margin: auto;
-      height: 80rem;
+    .wrapper {
       background-color: $color-background;
-      // responsive desktop
-      @include media-query(desktop) {
-        height: 41rem;
-      }
-      .restaurants__title {
-        width: 350px;
-        margin: auto;
-        padding-left: 1rem;
+      .restaurants__container {
+        position: relative;
+        gap: 1rem;
+        padding: 2rem 0 2rem 0;
+        width: 100%;
+        @include flex-column;
+        // margin: auto;
 
         // responsive desktop
         @include media-query(desktop) {
-          margin: 0; // Annule le centrage horizontal
-          align-self: flex-start; // Garantit l'alignement à gauche
-        }
-      }
-      .restaurants__cards-row {
-        @include flex-column;
-        margin: auto;
-        width: 350px;
-        // responsive desktop
-        @include media-query(desktop) {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          max-width: 100%;
-          width: 78rem;
+          height: 41rem;
           margin: auto;
+          width: 85%;
         }
-        .restaurants__card {
-          width: 100%;
+        .restaurants__title {
+          width: 350px;
           margin: auto;
-          position: relative;
-          height: 17.1875rem; // 275px
-          // responsive desktop
-          @include media-query(desktop) {
-            width: 500px;
-            height: 15.5rem;
+          padding-left: 1rem;
+          // responsive large desktop
+          @include media-query(large-desktop) {
+            padding-left: 3rem;
           }
 
-          .restaurants__link {
-            .restaurants__card-details {
-              @include flex-column-adjustable(flex-start, center);
-              height: 4.375rem; // 70px
-              padding: 0 0.8rem 0 0.8rem;
+          // responsive desktop
+          @include media-query(desktop) {
+            margin: 0; // Annule le centrage horizontal
+            align-self: flex-start; // Garantit l'alignement à gauche
+          }
+        }
+        .restaurants__cards-row {
+          @include flex-column;
+          margin: auto;
+          width: 350px;
+          // responsive desktop
+          @include media-query(desktop) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 100%;
+            width: 78rem;
+            margin: auto;
+          }
+          .restaurants__card {
+            width: 100%;
+            margin: auto;
+            position: relative;
+            height: 17.1875rem; // 275px
+            // responsive desktop
+            @include media-query(desktop) {
+              width: 500px;
+              height: 15.5rem;
+            }
 
-              .restaurants__card-header {
-                @include flex-between;
+            .restaurants__link {
+              .restaurants__card-details {
+                @include flex-column;
+                justify-content: center;
+                height: 4.375rem; // 70px
+                padding: 0 0.8rem 0 0.8rem;
 
-                .restaurants__card-heart-container {
-                  position: relative;
+                .restaurants__card-header {
+                  @include flex-between;
 
-                  .restaurants__card-heart-icon {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
+                  .restaurants__card-heart-container {
+                    position: relative;
+
+                    .restaurants__card-heart-icon {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                    }
                   }
                 }
               }
             }
           }
-        }
 
-        .card {
-          @include card-style;
-          & img {
-            @include card-img-style(100%, 11.875rem, 50% 60%); //190px
-          }
-          // responsive desktop
-          @include media-query(desktop) {
+          .card {
+            @include card-style;
             & img {
-              @include card-img-style(100%, 10.5rem, 50% 60%); //190px
+              @include card-img-style(100%, 11.875rem, 50% 60%); //190px
+            }
+            // responsive desktop
+            @include media-query(desktop) {
+              & img {
+                @include card-img-style(100%, 10.5rem, 50% 60%); //190px
+              }
             }
           }
         }

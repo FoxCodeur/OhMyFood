@@ -222,6 +222,10 @@
     @media screen and (min-width: 1024px) {
       @content;
     }
+  } @else if $size == large-desktop {
+    @media screen and (min-width: 1280px) {
+      @content;
+    }
   } @else if $size == tablet {
     @media screen and (min-width: 768px) {
       @content;
