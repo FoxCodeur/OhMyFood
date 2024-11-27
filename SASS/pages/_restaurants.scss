@@ -152,7 +152,7 @@
             //(.restaurants__menu-item) et que cela doit déclencher un changement
             //sur son enfant (.restaurants__menu-item-price).
             &:active .restaurants__menu-item-price {
-              transform: translateX(-40px); /* Déplacement vers la gauche */
+              padding-right: 40px; /* Déplacement vers la gauche */
             }
             .restaurants__menu-item-name {
               //mobile first
@@ -171,7 +171,7 @@
                 text-overflow: ellipsis; /* Affiche les "..." lorsque le texte déborde */
               }
               .restaurants__menu-item-price {
-                transition: transform 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
+                transition: padding-right 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
               }
             }
           }

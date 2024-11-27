@@ -506,18 +506,19 @@ lente, qui accélère ensuite, puis ralentie */
 .main-container {
   display: flex;
   flex-direction: column;
-  position: relative;
   width: 100%;
   margin: auto;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .main-container {
+    margin: auto;
+    width: 110%;
+  }
 }
 @media screen and (min-width: 1280px) {
   .main-container {
     max-width: 90rem;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .main-container {
-    width: 110%;
   }
 }
 .main-container .middle-content {
@@ -540,7 +541,7 @@ lente, qui accélère ensuite, puis ralentie */
   height: 3.125rem;
   background-color: #eaeaea;
 }
-.main-container .middle-content .intro .intro__container {
+.main-container .middle-content .intro__container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -550,7 +551,7 @@ lente, qui accélère ensuite, puis ralentie */
   background-color: #f6f6f6;
 }
 @media screen and (min-width: 1024px) {
-  .main-container .middle-content .intro .intro__container {
+  .main-container .middle-content .intro__container {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -558,26 +559,26 @@ lente, qui accélère ensuite, puis ralentie */
     height: 13.75rem;
   }
 }
-.main-container .middle-content .intro .intro__container .intro__title {
+.main-container .middle-content .intro__container .intro__title {
   padding: 0 0.625rem 0.5rem 0.625rem;
   width: 17.1875rem;
 }
 @media screen and (min-width: 1024px) {
-  .main-container .middle-content .intro .intro__container .intro__title {
+  .main-container .middle-content .intro__container .intro__title {
     width: 41.875rem;
     font-size: 2.5rem;
     line-height: 46.88px;
   }
 }
-.main-container .middle-content .intro .intro__container .intro__subtitle {
+.main-container .middle-content .intro__container .intro__subtitle {
   width: 19.6875rem;
 }
 @media screen and (min-width: 1024px) {
-  .main-container .middle-content .intro .intro__container .intro__subtitle {
+  .main-container .middle-content .intro__container .intro__subtitle {
     width: 41.875rem;
   }
 }
-.main-container .middle-content .intro .intro__container .intro__button-container {
+.main-container .middle-content .intro__container .intro__button-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -592,7 +593,7 @@ lente, qui accélère ensuite, puis ralentie */
   transition: box-shadow 0.3s ease;
   border: none;
 }
-.main-container .middle-content .intro .intro__container .intro__button-container:hover {
+.main-container .middle-content .intro__container .intro__button-container:hover {
   background: linear-gradient(180deg, rgb(255, 146.5, 225.0410447761) 0%, rgb(160.5, 107.125, 224.375) 100%);
   box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
 }
@@ -984,7 +985,7 @@ lente, qui accélère ensuite, puis ralentie */
   }
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item:active .restaurants__menu-item-price {
-  transform: translateX(-40px); /* Déplacement vers la gauche */
+  padding-right: 40px; /* Déplacement vers la gauche */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-name {
   overflow: hidden;
@@ -1003,7 +1004,7 @@ lente, qui accélère ensuite, puis ralentie */
   text-overflow: ellipsis; /* Affiche les "..." lorsque le texte déborde */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-details .restaurants__menu-item-price {
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
+  transition: padding-right 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu-order {
   display: flex;

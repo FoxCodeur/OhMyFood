@@ -3,15 +3,17 @@
 
 .main-container {
   @include flex-column;
-  position: relative;
   width: 100%;
   margin: auto;
+  overflow: hidden;
   // responsive desktop
+  @include media-query(desktop) {
+    margin: auto;
+    width: 110%;
+  }
+  // responsive large desktop
   @include media-query(large-desktop) {
     max-width: 90rem; // 1440px
-  }
-  @include media-query(desktop) {
-    width: 110%;
   }
 
   // Contenu principal
@@ -21,45 +23,45 @@
     height: 125rem;
     // responsive desktop
     @include media-query(desktop) {
-      height: 69.69rem; // 1100px
+      height: 69.69rem;
     }
 
     .location {
       @include flex-center;
       box-shadow: $box-shadow-location;
-      margin-bottom: 0.3125rem; // 5px
-      height: 3.125rem; // 50px
+      margin-bottom: 0.3125rem;
+      height: 3.125rem;
       background-color: #eaeaea;
     }
 
     .intro {
-      .intro__container {
+      &__container {
         @include flex-column-evenly;
-        height: 18.75rem; // 300px
+        height: 18.75rem;
         text-align: center;
         background-color: $color-background;
         // responsive desktop
         @include media-query(desktop) {
           @include flex-column-evenly;
-          height: 13.75rem; // 220px
+          height: 13.75rem;
         }
 
         .intro__title {
-          padding: 0 0.625rem 0.5rem 0.625rem; // 10px 8px 10px
-          width: 17.1875rem; // 275px
+          padding: 0 0.625rem 0.5rem 0.625rem;
+          width: 17.1875rem;
           // responsive desktop
           @include media-query(desktop) {
-            width: 41.875rem; // 670px
-            font-size: 2.5rem; // 40px
+            width: 41.875rem;
+            font-size: 2.5rem;
             line-height: 46.88px;
           }
         }
 
         .intro__subtitle {
-          width: 19.6875rem; // 315px
+          width: 19.6875rem;
           // responsive desktop
           @include media-query(desktop) {
-            width: 41.875rem; // 670px
+            width: 41.875rem;
           }
         }
 
@@ -78,7 +80,7 @@
       @include media-query(desktop) {
         flex-direction: column;
         margin: auto;
-        height: 8rem; // 80px
+        height: 8rem;
         width: 1140px;
         gap: 1.5rem;
       }
@@ -116,7 +118,7 @@
         }
 
         .step__item-text {
-          width: 13.1875rem; // 211px
+          width: 13.1875rem;
         }
 
         .step__item-content {
