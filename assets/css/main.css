@@ -510,9 +510,14 @@ lente, qui accélère ensuite, puis ralentie */
   width: 100%;
   margin: auto;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .main-container {
     max-width: 90rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-container {
+    width: 110%;
   }
 }
 .main-container .middle-content {
