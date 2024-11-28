@@ -200,7 +200,7 @@ Dans la section <head> du fichier, plusieurs éléments ont été ajoutés pour 
 Application du style général sur le fichier index.html !
     Tout d'abord, il est nécessaire de créer des variables pour définir les différentes tailles de police utilisées sur le site. Ensuite, il faut définir les styles typographiques pour chaque balise impliqué dans des modifications, tels que les titres, les sous-titres et les paragraphes.
 
-    Pour chaque niveau de titre et de paragraphe dans le fichier HTML, vous appliquerez les classes appropriées afin d'associer les polices et tailles de texte définies. Cela permet de garantir une typographie cohérente et bien structurée sur l'ensemble du site.  
+    Pour chaque niveau de titre et de paragraphe dans le fichier HTML, vous appliquerez les classes appropriées afin d'associer les polices et tailles de texte définies. Cela permet de garantir une typographie cohérente et bien structurée sur l'ensemble du site..  
     
     On nous a fournis des informations à propos des polices utilisés sur le site et on sait donc ceci: 
 
