@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OhMyFood</title>
-
+    <title>OhMyFood A la francçaise</title>
     <!-- Préconnexion pour optimiser le chargement des polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,9 +20,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Lien vers le fichier CSS compilé -->
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-
 
 <body>
     <div class="overlay">
@@ -33,156 +31,123 @@
             </div>
         </div>
     </div>
-    <!-- Conteneur principal -->
-    <div class="main-container">
-        <header class="header">
-            <a href="index.html" class="header__logo-container">
-                <img src="./assets/images/logo/ohmyfood.png" alt="OhMyFood Logo" class="header__logo">
-            </a>
+    <div class="restaurants__main-container">
+        <header class="restaurants-header">
+            <div class="restaurants-header__wrapper">
+                <div class="restaurants-header__back-content">
+                    <a href="./restaurant2.html" class="restaurants-header__back-link">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div class="restaurants-header__logo-container">
+                    <a href="../index.html" class="restaurants-header__logo-link">
+                        <img src="../assets/images/logo/ohmyfood.png" alt="OhMyFood Logo"
+                            class="restaurants-header__logo">
+                    </a>
+                </div>
+            </div>
         </header>
 
-
-        <main class="middle-content">
-            <!-- Section pour la localisation -->
-            <div class="location">
-                <form action="#" class="location__icon">
-                    <i class="fas fa-map-marker-alt"></i>
-
-                    <input type="text" placeholder="Paris, Belleville" aria-label="Saisissez une ville"
-                        class="location__city md-font">
-                </form>
-            </div>
-
-            <!-- Section pour le titre, sous-titre et lien -->
-            <section class="intro">
-                <div class="intro__container flex-column-center">
-                    <h1 class="intro__title xxl-font">Réservez le menu qui vous convient</h1>
-                    <p class="intro__subtitle xl-font-light">Découvrez des restaurants d'exception, sélectionnés par nos
-                        soins.
-                    </p>
-                    <div class="intro__button-container">
-                        <a class="intro__button md-font-a" href="#restaurants">Explorer nos restaurants</a>
+        <main class="restaurants__main-content">
+            <img src="../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant 1"
+                class="restaurants__introduction-image">
+            <section class="restaurants__menu">
+                <div class="restaurants__menu-header">
+                    <h1 class="restaurants__name double-xl-font">À la française</h1>
+                    <div class="restaurants__card-heart-container">
+                        <i
+                            class="restaurants__card-heart-icon restaurants__card-heart-icon--empty fa-regular fa-heart"></i>
+                        <i
+                            class="restaurants__card-heart-icon restaurants__card-heart-icon--full fa-solid fa-heart"></i>
                     </div>
                 </div>
-            </section>
+                <div class="restaurants__menu-details">
+                    <div class="restaurants__menu-section">
+                        <h2 class="restaurants__menu-title md-font-light">ENTREES</h2>
+                        <div class="restaurants__menu-item restaurants__menu-item--entree">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Tartare de poulpe acidulé</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Aux zestes d'orange</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">25€</p>
+                            </div>
+                        </div>
+                        <div class="restaurants__menu-item restaurants__menu-item--entree">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Velouté de légumes d'antan</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Carotte, panais, topinambour
+                                </p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">35€</p>
+                            </div>
+                        </div>
+                        <div class="restaurants__menu-item restaurants__menu-item--entree">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Soupe à l'oignon</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Revisitée</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">20€</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="restaurants__menu-section">
+                        <h2 class="restaurants__menu-title md-font-light">PLATS</h2>
+                        <div class="restaurants__menu-item restaurants__menu-item--plat">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Coquilles Saint-Jacques</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Accompagné d'une purée de
+                                    panais</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">40€</p>
+                            </div>
+                        </div>
+                        <div class="restaurants__menu-item restaurants__menu-item--plat">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Magret de canard</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Et parmentier de pommes de
+                                    terre</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">35€</p>
+                            </div>
+                        </div>
+                        <div class="restaurants__menu-item restaurants__menu-item--plat">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Pigonneau d'Ille-et-Vilaine</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Sur son lit de gnocchis aux
+                                    légumes</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">44€</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="restaurants__menu-section">
+                        <h2 class="restaurants__menu-title md-font-light">DESSERTS</h2>
+                        <div class="restaurants__menu-item restaurants__menu-item--dessert">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Pétales de violettes glacées</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Et purée de noisettes</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">18€</p>
+                            </div>
+                        </div>
+                        <div class="restaurants__menu-item restaurants__menu-item--dessert">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Fondant au chocolat</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Revisiteé</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">22€</p>
+                            </div>
+                        </div>
+                        <div class="restaurants__menu-item restaurants__menu-item--dessert">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Millefeuille croustillant</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Myrtille et pâte d'amande
+                                </p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">23€</p>
+                            </div>
 
-            <!-- Section Steps -->
-            <section class="step__container">
-                <h2 class="steps__title xxl-font">Fonctionnement</h2>
-                <div class="step__buttons">
-                    <button class="step__item">
-                        <span class="step__item-number" data-step="1"></span>
-                        <span class="step__item-content-1">
-                            <span class="step__item-text md-font">Choisissez un restaurant</span>
-                        </span>
-                    </button>
-                    <button class="step__item">
-                        <span class="step__item-number" data-step="2"></span>
-                        <span class="step__item-content-2">
-                            <span class="step__item-text md-font">Composez votre menu</span>
-                        </span>
-                    </button>
-                    <button class="step__item">
-                        <span class="step__item-number" data-step="3"></span>
-                        <span class="step__item-content-3">
-                            <span class="step__item-text md-font">Dégustez au restaurant</span>
-                        </span>
-                    </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="restaurants__menu-order">
+                    <button class="restaurants__menu-order-button">Commander</button>
                 </div>
             </section>
-
-            <!-- Section Restaurants -->
-            <div class="wrapper">
-                <section id="restaurants" class="restaurants__container">
-                    <h2 class="restaurants__title xxl-font">Restaurants</h2>
-                    <div class="restaurants__cards-row">
-                        <!-- Carte Restaurant 1 -->
-                        <article class="restaurants__card card">
-                            <div class="badge-highlight sm-font">Nouveau</div>
-                            <a href="./restaurants/restaurant1.html" class="restaurants__link">
-                                <img src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                    alt="Restaurant 1">
-                                <div class="restaurants__card-details">
-                                    <div class="restaurants__card-header">
-                                        <h3 class="restaurants__name xl-font">La palette du goût</h3>
-                                        <div class="restaurants__card-heart-container">
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--empty fa-regular fa-heart">
-                                            </i>
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--full fa-solid fa-heart">
-                                            </i>
-                                        </div>
-                                    </div>
-                                    <p class="restaurants__location lg-font">Ménilmontant</p>
-                                </div>
-                            </a>
-                        </article>
-                        <!-- Carte Restaurant 2 -->
-                        <article class="restaurants__card card">
-                            <div class="badge-highlight sm-font">Nouveau</div>
-                            <a href="./restaurants/restaurant2.html" class="restaurants__link">
-                                <img src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Restaurant 2">
-                                <div class="restaurants__card-details">
-                                    <div class="restaurants__card-header">
-                                        <h3 class="restaurants__name xl-font">La note enchantée</h3>
-                                        <div class="restaurants__card-heart-container">
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--empty fa-regular fa-heart"></i>
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--full fa-solid fa-heart"></i>
-                                        </div>
-                                    </div>
-                                    <p class="restaurants__location lg-font">Charonne</p>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                    <div class="restaurants__cards-row">
-                        <!-- Carte Restaurant 3 -->
-                        <article class="restaurants__card card">
-                            <a href="./restaurants/restaurant3.html" class="restaurants__link">
-                                <img src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                    alt="Restaurant 3">
-                                <div class="restaurants__card-details">
-                                    <div class="restaurants__card-header">
-                                        <h3 class="restaurants__name xl-font">À la française</h3>
-                                        <div class="restaurants__card-heart-container">
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--empty fa-regular fa-heart"></i>
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--full fa-solid fa-heart"></i>
-                                        </div>
-                                    </div>
-                                    <p class="restaurants__location lg-font">Cité Rouge</p>
-                                </div>
-                            </a>
-                        </article>
-                        <!-- Carte Restaurant 4 -->
-                        <article class="restaurants__card card">
-                            <a href="./restaurants/restaurant4.html" class="restaurants__link">
-                                <img src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                    alt="Restaurant 4">
-                                <div class="restaurants__card-details">
-                                    <div class="restaurants__card-header">
-                                        <h3 class="restaurants__name xl-font">Le délice des sens</h3>
-                                        <div class="restaurants__card-heart-container">
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--empty fa-regular fa-heart"></i>
-                                            <i
-                                                class="restaurants__card-heart-icon restaurants__card-heart-icon--full fa-solid fa-heart"></i>
-                                        </div>
-                                    </div>
-                                    <p class="restaurants__location lg-font">Folie-Méricourt</p>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                </section>
-            </div>
-
         </main>
-
         <footer class="footer">
             <!-- Logo Footer -->
             <div class="footer__logo">
@@ -224,6 +189,7 @@
                 </li>
             </ul>
         </footer>
+
     </div>
 </body>
 

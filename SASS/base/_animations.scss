@@ -1,0 +1,156 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
+  animation: loader 1s ease-out 1s forwards; /* 1s avant disparition, durée de fadeOut = 1s */
+
+  .overlay__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .overlay__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .loader {
+        // description d'un cercle avec une animation de spin
+        display: inline-block;
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        border-top-color: $color-primary;
+        animation: spin 2s linear infinite; /* Animation de rotation seulement */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .loader::before,
+      .loader::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 4px solid transparent;
+        animation: spin 3s linear infinite;
+      }
+
+      .loader::before {
+        top: 5px; /* Réduit l'espace entre la bordure principale et l'élément avant */
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-top-color: $color-secondary;
+        animation: spin 3s linear infinite;
+      }
+
+      .loader::after {
+        top: 15px; /* Réduit l'espace pour rendre les bordures plus longues */
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-top-color: $color-tertiary;
+        animation: spin 1.5s infinite linear;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+// animation coeur qui se remplit
+.restaurants__card-heart-icon {
+  font-size: 1.3rem;
+  transition: all 0.3s ease; /* ease pour une transition
+   lente, qui accélère ensuite, puis ralentie */
+  &--full {
+    opacity: 0;
+  }
+  &--full:hover {
+    opacity: 1;
+    background: $gradient;
+    // les icones font awesome se comportent comme du texte. On ne peux donc pas
+    // directement appliquer un background. Background-clip permet d'appliquer un
+    // background sur du texte.
+    background-clip: text; /* Supporte le fond comme clip de texte */
+    color: transparent; /* Rendre le texte transparent pour voir le fond dégradé */
+  }
+}
+// animation les menus qui apparaissent
+
+/* Animation fadeIn commune pour les entrées et les plats */
+.restaurants__menu-item--entree,
+.restaurants__menu-item--plat,
+.restaurants__menu-item--dessert {
+  opacity: 0; /* Initialement invisible */
+  animation: fadeIn 1.5s ease-out forwards; /* Durée de 1,5 seconde */
+}
+
+/* Animation pour les entrées */
+.restaurants__menu-item--entree:nth-of-type(4) {
+  animation-delay: 0.2s; /* Premier élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(3) {
+  animation-delay: 0.4s; /* Deuxième élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(2) {
+  animation-delay: 0.6s; /* Troisième élément entrée */
+}
+
+.restaurants__menu-item--entree:nth-of-type(1) {
+  animation-delay: 0.8s; /* Quatrième élément entrée */
+}
+
+/* Animation pour les plats */
+.restaurants__menu-item--plat:nth-of-type(3),
+.restaurants__menu-item--dessert:nth-of-type(3) {
+  animation-delay: 0.2s; /* Premier élément plat */
+}
+
+.restaurants__menu-item--plat:nth-of-type(2),
+.restaurants__menu-item--dessert:nth-of-type(2) {
+  animation-delay: 0.4s; /* Deuxième élément plat */
+}
+
+.restaurants__menu-item--plat:nth-of-type(1),
+.restaurants__menu-item--dessert:nth-of-type(1) {
+  animation-delay: 0.6s; /* Troisième élément plat */
+}
+
+/* Animation fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Début invisible */
+  }
+  100% {
+    opacity: 1; /* Fin visible */
+  }
+}

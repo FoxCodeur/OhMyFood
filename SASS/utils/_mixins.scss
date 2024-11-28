@@ -1,0 +1,234 @@
+// ==============================
+// FLEXBOX MIXINS
+// ==============================
+@use "../utils/variables" as *;
+// Ce sont les mixins fondamentaux pour l'utilisation de flexbox.
+@mixin flex {
+  display: flex;
+}
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+@mixin flex-nowrap {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+// Ces mixins sont dédiées à l'alignement (align-items) et la justification
+// (justify-content) des éléments dans le conteneur Flexbox.
+@mixin flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+@mixin flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-center {
+  @include flex-justify-center;
+  align-items: center;
+}
+// Ces mixins gèrent la direction des éléments en row (ligne) dans le conteneur
+// Flexbox.
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@mixin flex-between {
+  @include flex-row;
+  justify-content: space-between;
+}
+@mixin flex-evenly {
+  @include flex-row;
+  justify-content: space-evenly;
+}
+@mixin flex-around {
+  @include flex-row;
+  justify-content: space-around;
+}
+
+// Ce sont les mixins de flexbox pour les cas de flexbox en colonne.
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+@mixin flex-column-center {
+  @include flex-column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-column-between {
+  @include flex-column;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-column-around {
+  @include flex-column;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-column-evenly {
+  @include flex-column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// Ce mixin permet de personnaliser à la fois l'alignement et la justification
+// des éléments dans une colonne.
+@mixin flex-column-adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-column;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-row-reverse-adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-row-reverse;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-row--adjustable(
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  @include flex-row;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+// ==============================
+// BUTTON MIXINS
+@mixin steps-style {
+  width: 335px;
+  height: 72.38px;
+  border-radius: 20px;
+  background-color: $color-background;
+  box-shadow: $step-buttonbox-shadow;
+  padding: 0 20px;
+  border: none;
+  &:hover {
+    background: $color-background-lightened;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
+  }
+}
+@mixin button($width: 218px, $height: 50px) {
+  @include flex-center;
+  width: $width;
+  height: $height;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background: $gradient;
+  box-shadow: $intro-button-shadow;
+  transition: box-shadow 0.3s ease;
+  border: none;
+  &:hover {
+    background: $gradient-lightened;
+    box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
+  }
+}
+// ==============================
+// CARDS MIXINS
+@mixin card-style {
+  border-radius: 15px;
+  padding: 1rem; /* 5px */
+  box-shadow: 0px 4px 15px 0px #0000001a;
+}
+
+@mixin card-img-style($width: 100%, $height: auto, $object-position: 50% 50%) {
+  width: $width;
+  height: $height;
+  object-fit: cover;
+  object-position: $object-position; // Ajout dynamique de la position.
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+// --------------------------------------------------------------
+//pages restaurants
+// mixin pour le border-bottom dans les pages restaurants 1,2,3,4
+@mixin half-border-bottom(
+  $border-color: $color-tertiary,
+  $border-width: 3px,
+  $width: 2.5rem,
+  $margin-offset: 0.5rem // Décalage configurable
+) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: $width;
+    height: $border-width;
+    background-color: $border-color;
+    margin-top: $margin-offset; // Décalage vertical
+  }
+}
+
+@mixin menu-item-style--adjustable(
+  $width: 322.49px,
+  // Valeur par défaut pour la largeur
+  $height: 72.38px // Valeur par défaut pour la hauteur
+) {
+  width: $width;
+  height: $height;
+  border-radius: 20px;
+  box-shadow: $step-buttonbox-shadow;
+  padding: 0 20px;
+  border: none;
+}
+
+// mixins pour les media queries
+// @mixin media-query($size) : Ce mixin prend un paramètre $size qui définit le type de point de rupture que tu veux appliquer.
+// @content : La directive @content permet de définir des styles à l'intérieur du mixin qui seront ensuite injectés dans la règle du media query.
+@mixin media-query($size) {
+  @if $size == tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $size == large-desktop {
+    @media screen and (min-width: 1280px) {
+      @content;
+    }
+  }
+}

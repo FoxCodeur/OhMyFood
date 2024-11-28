@@ -1,0 +1,21 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+
+.header {
+  @include flex-center;
+  height: 65px;
+
+  .header__logo-container {
+    @include flex-center;
+    width: 100%;
+
+    .header__logo {
+      width: clamp(200px, 50%, 200px);
+      /* Fonction clamp()
+      La fonction prend trois arguments :
+          valeur min : La plus petite valeur que l'élément peut avoir.
+          valeur préférée : La valeur idéale (généralement fluide ou relative, comme un pourcentage ou une unité vw).
+          valeur max : La plus grande valeur que l'élément peut avoir. */
+    }
+  }
+}

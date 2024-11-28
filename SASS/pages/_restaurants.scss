@@ -1,0 +1,190 @@
+@use "../utils/mixins" as *;
+@use "../utils/variables" as *;
+.restaurants__main-container {
+  //mobile first
+  @include flex-column;
+  width: 100%;
+  margin: auto;
+  // responsive desktop
+  @include media-query(desktop) {
+    max-width: 90rem; // 1440px
+  }
+  .restaurants__main-content {
+    .restaurants__introduction-image {
+      //mobile first
+
+      // responsive desktop
+      @include media-query(desktop) {
+        width: 100%;
+        height: 21.875rem; /*350px*/
+        object-fit: cover; /* Rognage de l'image en conservant son aspect */
+        object-position: 50% 55%; /* Centre le contenu de l'image */
+      }
+    }
+    .restaurants__introduction-image--specific {
+      width: 100%;
+      height: 275px;
+      object-fit: cover;
+      object-position: 50% 55%;
+    }
+    .restaurants__menu {
+      //mobile first
+      @include flex-column-between;
+      height: 67.5rem; /* 1080px */
+      background-color: $color-background;
+      border-radius: 20px 20px 0 0;
+      position: relative; /* Permet de la déplacer sans affecter les autres éléments */
+      z-index: 2;
+      margin-top: -12%; /* Fait remonter la section sur l'image */
+      padding: 2rem 1rem 2rem 1rem;
+      // responsive desktop
+      @include media-query(desktop) {
+        width: 60%;
+        height: 70rem;
+        gap: 1rem;
+        margin: auto;
+        margin-top: -3%; /* Fait remonter la section sur l'image */
+      }
+      .restaurants__menu-header {
+        //mobile first
+        margin: auto;
+        width: 23.43rem; /* 375px */
+        position: relative;
+        @include flex-row--adjustable(center, space-between);
+        // responsive desktop
+        @include media-query(desktop) {
+        }
+        .restaurants__card-heart-container {
+          position: relative;
+          .restaurants__card-heart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-150%, -50%);
+            padding-right: 2rem;
+            padding-bottom: 0.5rem;
+          }
+        }
+      }
+      .restaurants__menu-details {
+        .restaurants__menu-section {
+          //mobile first
+          @include flex-column-adjustable(flex-start, space-around);
+          height: 17.5rem; /* 280px */
+          width: 20rem;
+          margin: auto;
+          margin-bottom: 1.5rem;
+          // responsive desktop
+          @include media-query(desktop) {
+            width: 40rem;
+          }
+          &.restaurants__menu-section--la-note-enchantée {
+            height: 20rem;
+          }
+          .restaurants__menu-title {
+            //mobile first
+            @include half-border-bottom;
+          }
+          .restaurants__menu-item {
+            //mobile first
+            margin: auto;
+            @include flex-column;
+            justify-content: center;
+            @include menu-item-style--adjustable(330px, 69px);
+            //animation div qui se rétracte
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            overflow: hidden;
+            &::before,
+            &::after {
+              transition: transform 0.5s ease, opacity 0.5s ease;
+            }
+            &::before {
+              content: "\f00c"; /* Unicode de l'icône Font Awesome */
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              font-size: 0.75rem; /* 12px */
+              position: absolute;
+              top: 50%;
+              right: -50px; /* Position initiale à l'extérieur à droite */
+              width: 20px;
+              height: 20px;
+              background: white;
+              color: $color-tertiary; /* Couleur de l'icône */
+              text-align: center; /* Centrer horizontalement l'icône */
+              line-height: 20px; /* Centrer verticalement l'icône dans le cercle (réduit) */
+              border-radius: 50%; /* Forme circulaire */
+              z-index: 3; /* Placer l'icône au-dessus du fond */
+              opacity: 0; /* Initialement invisible */
+            }
+
+            &:active::before {
+              transform: translateX(-70px) translateY(-50%); /* Déplacer l'icône vers la gauche */
+              opacity: 1; /* Rendre l'icône visible */
+            }
+
+            &::after {
+              content: ""; /* Nécessaire pour que le pseudo-élément apparaisse */
+              position: absolute;
+              top: 0; /* Positionné en haut du parent */
+              right: -3.4375rem; /* 55px Initialement à l'extérieur à droite */
+              width: 3.4375rem; /* Largeur de l'élément */
+              height: 100%; /* Hauteur de l'élément */
+              background-color: $color-tertiary; /* Fond rouge pour que l'élément soit visible */
+              z-index: 2; /* Pour s'assurer qu'il est visible au-dessus du fond */
+              opacity: 0; /* Initialement invisible */
+              transform: translateX(100%); /* Position initiale à l'extérieur */
+            }
+
+            &:active::after {
+              opacity: 1; /* Rendre la bande visible */
+              transform: translateX(
+                -50px
+              ); /* Déplacer la bande à sa position d'origine (à l'intérieur) */
+            }
+            // responsive desktop
+            @include media-query(desktop) {
+              @include menu-item-style--adjustable(640px, 69px);
+            }
+            // Placer :hover avant .restaurants__menu-item-price est une façon de
+            // dire que l'état de survol s'applique à l'élément parent
+            //(.restaurants__menu-item) et que cela doit déclencher un changement
+            //sur son enfant (.restaurants__menu-item-price).
+            &:active .restaurants__menu-item-price {
+              padding-right: 40px; /* Déplacement vers la gauche */
+            }
+            .restaurants__menu-item-name {
+              //mobile first
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+            .restaurants__menu-item-details {
+              //mobile first
+              @include flex-between;
+              .restaurants__menu-item-description {
+                //mobile first
+                width: 255px;
+                white-space: nowrap;
+                overflow: hidden; /* Cache le texte qui dépasse */
+                text-overflow: ellipsis; /* Affiche les "..." lorsque le texte déborde */
+              }
+              .restaurants__menu-item-price {
+                transition: padding-right 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
+              }
+            }
+          }
+        }
+      }
+    }
+    .restaurants__menu-order {
+      //mobile first
+      @include flex-center;
+      .restaurants__menu-order-button {
+        //mobile first
+        @include button;
+      }
+    }
+  }
+}
