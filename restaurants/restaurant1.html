@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OhMyFood restaurant 01</title>
+    <title>OhMyFood La palette du goût</title>
     <!-- Préconnexion pour optimiser le chargement des polices Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +24,13 @@
 </head>
 
 <body>
+    <div class="overlay">
+        <div class="overlay__inner">
+            <div class="overlay__content">
+                <div class="loader"></div>
+            </div>
+        </div>
+    </div>
     <div class="restaurants__main-container">
         <header class="restaurants-header">
             <div class="restaurants-header__wrapper">
@@ -33,7 +40,7 @@
                     </a>
                 </div>
                 <div class="restaurants-header__logo-container">
-                    <a href="index.html" class="restaurants-header__logo-link">
+                    <a href="../index.html" class="restaurants-header__logo-link">
                         <img src="../assets/images/logo/ohmyfood.png" alt="OhMyFood Logo"
                             class="restaurants-header__logo">
                     </a>
@@ -46,68 +53,102 @@
                 class="restaurants__introduction-image">
             <section class="restaurants__menu">
                 <div class="restaurants__menu-header">
-                    <h1 class="restaurants__name double-xl-font">La palette du goût</h1>
-                    <div class="restaurants__heart-container">
-                        <i class="restaurants__heart-icon fa-regular fa-heart"></i>
-                        <i class="restaurants__heart-icon fa-solid fa-heart"></i>
+                    <h1 class="restaurants__name double-xl-font">La palette du goût
+                    </h1>
+                    <div class="restaurants__card-heart-container">
+                        <i
+                            class="restaurants__card-heart-icon restaurants__card-heart-icon--empty fa-regular fa-heart"></i>
+                        <i
+                            class="restaurants__card-heart-icon restaurants__card-heart-icon--full fa-solid fa-heart"></i>
                     </div>
                 </div>
                 <div class="restaurants__menu-details">
                     <div class="restaurants__menu-section">
                         <h2 class="restaurants__menu-title md-font-light">ENTREES</h2>
-                        <div class="restaurants__menu-item">
-                            <h3 class="restaurants__menu-item-name xl-font-medium">Fricassée d'escargot</h3>
-                            <p class="restaurants__menu-item-description">Au piment d'Espelette</p>
-                            <p class="restaurants__menu-item-price">25€</p>
+                        <div class="restaurants__menu-item restaurants__menu-item--entree">
+                            <h3 class="restaurants__menu-item-name xl-font-medium">Fricassée d'escargot</h3>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Au piment d'Espelette</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">25€</p>
+                            </div>
                         </div>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--entree">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Foie gras de canard mi-cuit</h3>
-                            <p class="restaurants__menu-item-description">Et ses copeaux de truffe noire</p>
-                            <p class="restaurants__menu-item-price">35€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Et ses copeaux de truffe noire
+                                </p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">35€</p>
+                            </div>
                         </div>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--entree">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Oeuf au plat</h3>
-                            <p class="restaurants__menu-item-description">Assaisonné à la truffe sur lit de caviar</p>
-                            <p class="restaurants__menu-item-price">20€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Assaisonné à la truffe sur
+                                    lit de
+                                    caviar</p>
+
+                                <p class="restaurants__menu-item-price sm-md-font-bold">20€</p>
+                            </div>
                         </div>
                     </div>
                     <div class="restaurants__menu-section">
                         <h2 class="restaurants__menu-title md-font-light">PLATS</h2>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--plat">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Filet de boeuf aux herbes</h3>
-                            <p class="restaurants__menu-item-description">Accompagné de sa ribambelle de légumes</p>
-                            <p class="restaurants__menu-item-price">40€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Accompagné de sa ribambelle de
+                                    légumes</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">40€</p>
+                            </div>
                         </div>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--plat">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Parmentier de queu de boeuf</h3>
-                            <p class="restaurants__menu-item-description">A la truffe noire sur sa purée de panais</p>
-                            <p class="restaurants__menu-item-price">35€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">À la truffe noire sur sa purée
+                                    de panais</p>
+
+                                <p class="restaurants__menu-item-price sm-md-font-bold">35€</p>
+                            </div>
                         </div>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--plat">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Filet de turbot</h3>
-                            <p class="restaurants__menu-item-description">Aux agrumes</p>
-                            <p class="restaurants__menu-item-price">44€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Aux agrumes</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">44€</p>
+                            </div>
                         </div>
                     </div>
                     <div class="restaurants__menu-section">
                         <h2 class="restaurants__menu-title md-font-light">DESSERTS</h2>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--dessert">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Paris-Brest</h3>
-                            <p class="restaurants__menu-item-description">Revisité</p>
-                            <p class="restaurants__menu-item-price">18€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Revisité</p>
+                                <p class="restaurants__menu-item-price sm-md-font-bold">18€</p>
+                            </div>
                         </div>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--dessert">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Macaron au chocolat d'exception</h3>
-                            <p class="restaurants__menu-item-description">Et glace à la vanille de Madagascar</p>
-                            <p class="restaurants__menu-item-price">22€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Et glace à la vanille de
+                                    Madagascar</p>
+
+                                <p class="restaurants__menu-item-price sm-md-font-bold">22€</p>
+                            </div>
                         </div>
-                        <div class="restaurants__menu-item">
+                        <div class="restaurants__menu-item restaurants__menu-item--dessert">
                             <h3 class="restaurants__menu-item-name xl-font-medium">Mousse au chocolat</h3>
-                            <p class="restaurants__menu-item-description">Au piment d'Espelette et à la truffe noire
-                            </p>
-                            <p class="restaurants__menu-item-price">23€</p>
+                            <div class="restaurants__menu-item-details">
+                                <p class="restaurants__menu-item-description sm-md-font">Au piment d'Espelette et à la
+                                    truffe noire</p>
+
+                                <p class="restaurants__menu-item-price sm-md-font-bold">23€</p>
+                            </div>
+
                         </div>
+
                     </div>
+
                 </div>
                 <div class="restaurants__menu-order">
                     <button class="restaurants__menu-order-button">Commander</button>
@@ -151,7 +192,7 @@
                     <a class="md-font" href="#">Mentions légales</a>
                 </li>
                 <li class="footer__link-item footer__link-item--info">
-                    <a class="md-font" href="#">Contact</a>
+                    <a class="md-font" href="mailto:contact@example.com">Contact</a>
                 </li>
             </ul>
         </footer>

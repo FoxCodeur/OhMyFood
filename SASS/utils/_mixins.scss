@@ -178,16 +178,56 @@
   overflow: hidden;
 }
 
+// --------------------------------------------------------------
+//pages restaurants
+// mixin pour le border-bottom dans les pages restaurants 1,2,3,4
+@mixin half-border-bottom(
+  $border-color: $color-tertiary,
+  $border-width: 3px,
+  $width: 2.5rem,
+  $margin-offset: 0.5rem // Décalage configurable
+) {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: $width;
+    height: $border-width;
+    background-color: $border-color;
+    margin-top: $margin-offset; // Décalage vertical
+  }
+}
+
+@mixin menu-item-style--adjustable(
+  $width: 322.49px,
+  // Valeur par défaut pour la largeur
+  $height: 72.38px // Valeur par défaut pour la hauteur
+) {
+  width: $width;
+  height: $height;
+  border-radius: 20px;
+  box-shadow: $step-buttonbox-shadow;
+  padding: 0 20px;
+  border: none;
+}
+
 // mixins pour les media queries
 // @mixin media-query($size) : Ce mixin prend un paramètre $size qui définit le type de point de rupture que tu veux appliquer.
 // @content : La directive @content permet de définir des styles à l'intérieur du mixin qui seront ensuite injectés dans la règle du media query.
 @mixin media-query($size) {
-  @if $size == desktop {
+  @if $size == tablet {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  } @else if $size == desktop {
     @media screen and (min-width: 1024px) {
       @content;
     }
-  } @else if $size == tablet {
-    @media screen and (min-width: 768px) {
+  } @else if $size == large-desktop {
+    @media screen and (min-width: 1280px) {
       @content;
     }
   }

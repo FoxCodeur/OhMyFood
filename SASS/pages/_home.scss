@@ -3,12 +3,16 @@
 
 .main-container {
   @include flex-column;
-  position: relative;
   width: 100%;
   margin: auto;
+  overflow: hidden;
   // responsive desktop
   @include media-query(desktop) {
-    // width: 100%;
+    margin: auto;
+    width: 110%;
+  }
+  // responsive large desktop
+  @include media-query(large-desktop) {
     max-width: 90rem; // 1440px
   }
 
@@ -16,47 +20,48 @@
   .middle-content {
     @include flex-column;
     width: 100%;
+    height: 125rem;
     // responsive desktop
     @include media-query(desktop) {
-      height: 69.69rem; // 1100px
+      height: 69.69rem;
     }
 
     .location {
       @include flex-center;
       box-shadow: $box-shadow-location;
-      margin-bottom: 0.3125rem; // 5px
-      height: 3.125rem; // 50px
+      margin-bottom: 0.3125rem;
+      height: 3.125rem;
       background-color: #eaeaea;
     }
 
     .intro {
-      .intro__container {
+      &__container {
         @include flex-column-evenly;
-        height: 18.75rem; // 300px
+        height: 18.75rem;
         text-align: center;
         background-color: $color-background;
         // responsive desktop
         @include media-query(desktop) {
           @include flex-column-evenly;
-          height: 13.75rem; // 220px
+          height: 13.75rem;
         }
 
         .intro__title {
-          padding: 0 0.625rem 0.5rem 0.625rem; // 10px 8px 10px
-          width: 17.1875rem; // 275px
+          padding: 0 0.625rem 0.5rem 0.625rem;
+          width: 17.1875rem;
           // responsive desktop
           @include media-query(desktop) {
-            width: 41.875rem; // 670px
-            font-size: 2.5rem; // 40px
+            width: 41.875rem;
+            font-size: 2.5rem;
             line-height: 46.88px;
           }
         }
 
         .intro__subtitle {
-          width: 19.6875rem; // 315px
+          width: 19.6875rem;
           // responsive desktop
           @include media-query(desktop) {
-            width: 41.875rem; // 670px
+            width: 41.875rem;
           }
         }
 
@@ -66,34 +71,31 @@
       }
     }
 
-    .steps {
+    .step__container {
       @include flex-column-evenly;
-      align-items: flex-start;
       margin: auto;
-      height: 25rem; // 390px
+      height: 23rem;
+      align-items: flex-start;
       // responsive desktop
       @include media-query(desktop) {
-        @extend .common-width;
-        @include flex-column;
-        height: 13.25rem; //212px
-        padding-top: 3rem;
+        flex-direction: column;
+        margin: auto;
+        height: 8rem;
+        width: 1140px;
+        gap: 1.5rem;
       }
-
-      .step__container {
+      .step__buttons {
+        height: 15rem;
         @include flex-column-between;
-        margin-left: 1rem;
-        height: 17rem; // 300px
-        // responsive desktop
+        // responsive design
         @include media-query(desktop) {
+          width: 1090px;
           @include flex-around;
-          margin: auto;
-          height: 5rem; // 80px
-          width: 100%;
         }
-
         .step__item {
           @include steps-style;
           @include flex-center;
+          width: 310px;
           position: relative;
           cursor: pointer;
         }
@@ -116,7 +118,7 @@
         }
 
         .step__item-text {
-          width: 13.1875rem; // 211px
+          width: 13.1875rem;
         }
 
         .step__item-content {
@@ -165,46 +167,52 @@
         }
       }
     }
-
-    .restaurants {
-      @include flex-column-evenly;
-      align-items: flex-start;
-      width: 100%;
-      height: 75rem;
+    .wrapper {
       background-color: $color-background;
-      // responsive desktop
-      @include media-query(desktop) {
-        @extend .common-width;
-        width: 100%;
-        height: 39rem;
-      }
-      .restaurants__title {
-        // responsive desktop
-        @include media-query(desktop) {
-          padding-top: 2rem;
-          @extend .common-width;
-        }
-      }
       .restaurants__container {
+        position: relative;
+        gap: 1rem;
+        padding: 2rem 0 2rem 0;
         width: 100%;
+        @include flex-column;
+        // margin: auto;
+
         // responsive desktop
         @include media-query(desktop) {
-          @include flex-column-between;
-          width: 100%;
-          height: 35rem;
+          height: 41rem;
+          margin: auto;
+          width: 85%;
+        }
+        .restaurants__title {
+          width: 350px;
+          margin: auto;
+          padding-left: 1rem;
+          // responsive large desktop
+          @include media-query(large-desktop) {
+            padding-left: 3rem;
+          }
+
+          // responsive desktop
+          @include media-query(desktop) {
+            margin: 0; // Annule le centrage horizontal
+            align-self: flex-start; // Garantit l'alignement à gauche
+          }
         }
         .restaurants__cards-row {
+          @include flex-column;
+          margin: auto;
+          width: 350px;
           // responsive desktop
           @include media-query(desktop) {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: space-between;
             max-width: 100%;
             width: 78rem;
             margin: auto;
           }
           .restaurants__card {
-            width: 375px;
+            width: 100%;
             margin: auto;
             position: relative;
             height: 17.1875rem; // 275px
@@ -216,7 +224,8 @@
 
             .restaurants__link {
               .restaurants__card-details {
-                @include flex-column-adjustable(left, center);
+                @include flex-column;
+                justify-content: center;
                 height: 4.375rem; // 70px
                 padding: 0 0.8rem 0 0.8rem;
 
@@ -225,22 +234,28 @@
 
                   .restaurants__card-heart-container {
                     position: relative;
+
+                    .restaurants__card-heart-icon {
+                      position: absolute;
+                      top: 0;
+                      right: 0;
+                    }
                   }
                 }
               }
             }
           }
-        }
 
-        .card {
-          @include card-style;
-          & img {
-            @include card-img-style(100%, 11.875rem, 50% 60%); //190px
-          }
-          // responsive desktop
-          @include media-query(desktop) {
+          .card {
+            @include card-style;
             & img {
-              @include card-img-style(100%, 10.5rem, 50% 60%); //190px
+              @include card-img-style(100%, 11.875rem, 50% 60%); //190px
+            }
+            // responsive desktop
+            @include media-query(desktop) {
+              & img {
+                @include card-img-style(100%, 10.5rem, 50% 60%); //190px
+              }
             }
           }
         }

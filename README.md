@@ -12,6 +12,17 @@ projet n°4 du cursus d'intégrateur
    
     Installe Sass comme dépendance de ton projet :
     npm install --save-dev sass
+
+    settings.json (dans le dossier .vscode) : C'est ici que tu effectues les modifications pour configurer l'extension Live Sass Compiler. Ce fichier est dédié aux paramètres spécifiques à VS Code et à ses extensions, et il permet de personnaliser le comportement de ton éditeur sans affecter le code source ou les dépendances de ton projet.
+
+    // Configuration pour Live Sass Compiler
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/css"
+    }
+  ],
     
 2. l'arborescence
 

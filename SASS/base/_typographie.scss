@@ -20,7 +20,8 @@ a {
   font-family: variables.$font-logo;
 }
 .double-xl-font {
-  font-size: variables.$font-double-xl; // 2.5rem (40px)
+  font-size: variables.$font-xxxl; // 1.75rem (// 28px)
+  font-family: variables.$font-logo;
   font-weight: 400;
   line-height: 40.82px;
   font-style: italic;
@@ -72,6 +73,16 @@ a {
   font-size: variables.$font-md; // 1rem (16px)
   font-weight: 500;
   line-height: 18.75px;
+}
+.sm-md-font-bold {
+  font-size: variables.$font-sm-md; // 0.937rem (15px)
+  font-weight: 700;
+  line-height: 17.63px;
+}
+.sm-md-font {
+  font-size: variables.$font-sm-md; // 0.937rem (15px)
+  font-weight: 300;
+  line-height: 17.63px;
 }
 
 .sm-font {
