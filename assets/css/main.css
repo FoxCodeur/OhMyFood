@@ -646,7 +646,7 @@ lente, qui accélère ensuite, puis ralentie */
   cursor: pointer;
 }
 .main-container .middle-content .step__container .step__buttons .step__item:hover {
-  background: white;
+  background: hsl(0, 0%, 101.4705882353%);
   box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
 }
 .main-container .middle-content .step__container .step__buttons .step__item-number::before {
@@ -1050,5 +1050,3 @@ lente, qui accélère ensuite, puis ralentie */
   width: clamp(200px, 50%, 200px);
   margin: auto;
 }
-
-/*# sourceMappingURL=main.css.map */
