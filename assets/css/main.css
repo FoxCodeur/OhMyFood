@@ -987,11 +987,6 @@ lente, qui accélère ensuite, puis ralentie */
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item:active .restaurants__menu-item-price {
   padding-right: 40px; /* Déplacement vers la gauche */
 }
-.restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-name {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-details {
   display: flex;
   flex-direction: row;

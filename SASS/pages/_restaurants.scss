@@ -154,12 +154,6 @@
             &:active .restaurants__menu-item-price {
               padding-right: 40px; /* Déplacement vers la gauche */
             }
-            .restaurants__menu-item-name {
-              //mobile first
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-            }
             .restaurants__menu-item-details {
               //mobile first
               @include flex-between;
