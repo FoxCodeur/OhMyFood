@@ -11,8 +11,8 @@
     ],
     "routes": [
       {
-        "src": "/assets/css/main.css",
-        "dest": "/assets/css/main.css"
+        "src": "/assets/css/(.*)",
+        "dest": "/assets/css/$1"
       }
     ]
   }
