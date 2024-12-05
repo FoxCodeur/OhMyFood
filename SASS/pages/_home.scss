@@ -185,7 +185,6 @@
         }
         .restaurants__title {
           width: 350px;
-          margin: auto;
           padding-left: 1rem;
           // responsive large desktop
           @include media-query(large-desktop) {
@@ -201,7 +200,7 @@
         .restaurants__cards-row {
           @include flex-column;
           margin: auto;
-          width: 350px;
+          width: 100%;
           // responsive desktop
           @include media-query(desktop) {
             display: flex;

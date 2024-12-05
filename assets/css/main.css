@@ -402,6 +402,7 @@ lente, qui accélère ensuite, puis ralentie */
   line-height: 2;
   color: #008766;
   background-color: #99e2d0;
+  font-family: "Roboto", sans-serif;
 }
 
 .location__icon {
@@ -727,7 +728,6 @@ lente, qui accélère ensuite, puis ralentie */
 }
 .main-container .middle-content .wrapper .restaurants__container .restaurants__title {
   width: 350px;
-  margin: auto;
   padding-left: 1rem;
 }
 @media screen and (min-width: 1280px) {
@@ -745,7 +745,7 @@ lente, qui accélère ensuite, puis ralentie */
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 350px;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .main-container .middle-content .wrapper .restaurants__container .restaurants__cards-row {
