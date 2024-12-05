@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:watch": "sass --watch sass/main.scss:assets/css/main.css",
+    "sass:watch": "sass --watch sass/main.scss:assets/css/main.css --no-source-map",
     "build": "sass sass/main.scss:assets/css/main.css --no-source-map"
   },
   "repository": {
@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/FoxCodeur/OhMyFood#readme",
   "devDependencies": {
-    "sass": "^1.80.6"
+    "sass": "^1.82.0"
   }
 }

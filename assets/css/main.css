@@ -646,7 +646,7 @@ lente, qui accélère ensuite, puis ralentie */
   cursor: pointer;
 }
 .main-container .middle-content .step__container .step__buttons .step__item:hover {
-  background: white;
+  background: hsl(0, 0%, 101.4705882353%);
   box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
 }
 .main-container .middle-content .step__container .step__buttons .step__item-number::before {
@@ -986,11 +986,6 @@ lente, qui accélère ensuite, puis ralentie */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item:active .restaurants__menu-item-price {
   padding-right: 40px; /* Déplacement vers la gauche */
-}
-.restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-name {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-details {
   display: flex;
