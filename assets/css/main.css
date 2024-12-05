@@ -646,7 +646,7 @@ lente, qui accélère ensuite, puis ralentie */
   cursor: pointer;
 }
 .main-container .middle-content .step__container .step__buttons .step__item:hover {
-  background: hsl(0, 0%, 101.4705882353%);
+  background: white;
   box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.4);
 }
 .main-container .middle-content .step__container .step__buttons .step__item-number::before {
@@ -707,7 +707,8 @@ lente, qui accélère ensuite, puis ralentie */
 .main-container .middle-content .step__container .step__buttons .step__item:hover .step__item-content-3::before {
   color: #9356dc;
 }
-
+.main-container .middle-content .wrapper {
+  background-color: #f6f6f6;
 }
 .main-container .middle-content .wrapper .restaurants__container {
   position: relative;
@@ -986,6 +987,11 @@ lente, qui accélère ensuite, puis ralentie */
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item:active .restaurants__menu-item-price {
   padding-right: 40px; /* Déplacement vers la gauche */
 }
+.restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-details {
   display: flex;
   flex-direction: row;
@@ -1049,3 +1055,5 @@ lente, qui accélère ensuite, puis ralentie */
   width: clamp(200px, 50%, 200px);
   margin: auto;
 }
+
+/*# sourceMappingURL=main.css.map */
