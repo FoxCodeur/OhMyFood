@@ -39,7 +39,7 @@
       padding: 2rem 1rem 2rem 1rem;
       // responsive desktop
       @include media-query(desktop) {
-        width: 60%;
+        width: 66%;
         height: 70rem;
         gap: 1rem;
         margin: auto;
@@ -67,16 +67,22 @@
         }
       }
       .restaurants__menu-details {
+        width: 100%;
+        // responsive desktop
         .restaurants__menu-section {
           //mobile first
           @include flex-column-adjustable(flex-start, space-around);
           height: 17.5rem; /* 280px */
-          width: 20rem;
+          width: 100%;
           margin: auto;
           margin-bottom: 1.5rem;
+          // responsive tablet
+          @include media-query(tablet) {
+            width: 80%;
+          }
           // responsive desktop
           @include media-query(desktop) {
-            width: 40rem;
+            width: 65%;
           }
           &.restaurants__menu-section--la-note-enchantée {
             height: 20rem;
@@ -145,7 +151,7 @@
             }
             // responsive desktop
             @include media-query(desktop) {
-              @include menu-item-style--adjustable(640px, 69px);
+              @include menu-item-style--adjustable(100%, 69px);
             }
             // Placer :hover avant .restaurants__menu-item-price est une façon de
             // dire que l'état de survol s'applique à l'élément parent
@@ -174,10 +180,16 @@
     }
     .restaurants__menu-order {
       //mobile first
+      width: 100%;
       @include flex-center;
       .restaurants__menu-order-button {
         //mobile first
         @include button;
+        width: 100%;
+        //responsive tablet
+        @include media-query(tablet) {
+          width: 30%;
+        }
       }
     }
   }

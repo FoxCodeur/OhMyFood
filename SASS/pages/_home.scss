@@ -4,12 +4,13 @@
 .main-container {
   @include flex-column;
   width: 100%;
+  // width: 100vw;
   margin: auto;
   overflow: hidden;
   // responsive desktop
   @include media-query(desktop) {
     margin: auto;
-    width: 110%;
+    width: 100%;
   }
   // responsive large desktop
   @include media-query(large-desktop) {
@@ -40,6 +41,10 @@
         height: 18.75rem;
         text-align: center;
         background-color: $color-background;
+        // responsive tablet
+        @include media-query(tablet) {
+          padding-top: 2rem;
+        }
         // responsive desktop
         @include media-query(desktop) {
           @include flex-column-evenly;
@@ -66,38 +71,59 @@
         }
 
         .intro__button-container {
-          @include button;
+          @include button(60%); // Largeur et hauteur personnalisées
+          // responsive tablet
+          @include media-query(tablet) {
+            width: 30%;
+            margin: auto;
+          }
         }
       }
     }
 
     .step__container {
       @include flex-column-evenly;
-      margin: auto;
+      width: 100%;
       height: 23rem;
       align-items: flex-start;
       // responsive desktop
       @include media-query(desktop) {
         flex-direction: column;
         margin: auto;
-        height: 8rem;
-        width: 1140px;
-        gap: 1.5rem;
+        height: 15rem;
+        width: 80%;
+      }
+      .steps__title {
+        padding-left: 1rem;
+        // responsive tablet
+        @include media-query(tablet) {
+          padding-top: 1.5rem;
+        }
       }
       .step__buttons {
+        width: 100%;
         height: 15rem;
         @include flex-column-between;
+        // responsive tablet
+        @include media-query(tablet) {
+          width: 80%;
+          margin: auto;
+        }
         // responsive design
         @include media-query(desktop) {
-          width: 1090px;
+          width: 110%;
           @include flex-around;
         }
         .step__item {
           @include steps-style;
           @include flex-center;
-          width: 310px;
+          width: 85%;
           position: relative;
           cursor: pointer;
+          // responsive desktop
+          @include media-query(desktop) {
+            width: 30%;
+          }
         }
 
         .step__item-number::before {
@@ -186,15 +212,14 @@
         .restaurants__title {
           width: 350px;
           padding-left: 1rem;
-          // responsive large desktop
-          @include media-query(large-desktop) {
-            padding-left: 3rem;
-          }
-
           // responsive desktop
           @include media-query(desktop) {
             margin: 0; // Annule le centrage horizontal
             align-self: flex-start; // Garantit l'alignement à gauche
+          }
+          // responsive large desktop
+          @include media-query(large-desktop) {
+            padding-left: 3rem;
           }
         }
         .restaurants__cards-row {
@@ -215,6 +240,10 @@
             margin: auto;
             position: relative;
             height: 17.1875rem; // 275px
+            //responsive tablet
+            @include media-query(tablet) {
+              width: 80%;
+            }
             // responsive desktop
             @include media-query(desktop) {
               width: 500px;
