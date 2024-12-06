@@ -174,6 +174,13 @@
                 transition: padding-right 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
               }
             }
+            .restaurants__menu-item-name {
+              /* Applique ces propriétés pour tronquer le texte */
+              white-space: nowrap; /* Empêche le texte de se répartir sur plusieurs lignes */
+              overflow: hidden; /* Cache le texte qui dépasse */
+              text-overflow: ellipsis; /* Affiche "..." lorsque le texte dépasse */
+              width: 100%; /* S'assure que le h3 prend toute la largeur disponible */
+            }
           }
         }
       }

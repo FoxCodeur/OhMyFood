@@ -762,7 +762,7 @@ lente, qui accélère ensuite, puis ralentie */
 .main-container .middle-content .wrapper .restaurants__container {
   position: relative;
   gap: 1rem;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 1rem 2rem 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -844,7 +844,6 @@ lente, qui accélère ensuite, puis ralentie */
 }
 .main-container .middle-content .wrapper .restaurants__container .restaurants__cards-row .card {
   border-radius: 15px;
-  padding: 1rem; /* 5px */
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .main-container .middle-content .wrapper .restaurants__container .restaurants__cards-row .card img {
@@ -1061,6 +1060,13 @@ lente, qui accélère ensuite, puis ralentie */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-details .restaurants__menu-item-price {
   transition: padding-right 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
+}
+.restaurants__main-container .restaurants__main-content .restaurants__menu .restaurants__menu-details .restaurants__menu-section .restaurants__menu-item .restaurants__menu-item-name {
+  /* Applique ces propriétés pour tronquer le texte */
+  white-space: nowrap; /* Empêche le texte de se répartir sur plusieurs lignes */
+  overflow: hidden; /* Cache le texte qui dépasse */
+  text-overflow: ellipsis; /* Affiche "..." lorsque le texte dépasse */
+  width: 100%; /* S'assure que le h3 prend toute la largeur disponible */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu-order {
   width: 55%;
