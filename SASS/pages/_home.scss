@@ -24,7 +24,7 @@
     height: 125rem;
     // responsive desktop
     @include media-query(desktop) {
-      height: 69.69rem;
+      height: 73rem;
     }
 
     .location {
@@ -33,6 +33,7 @@
       margin-bottom: 0.3125rem;
       height: 3.125rem;
       background-color: #eaeaea;
+      // responsive desktop
     }
 
     .intro {
@@ -76,6 +77,10 @@
           @include media-query(tablet) {
             width: 30%;
             margin: auto;
+          }
+          // responsive desktop
+          @include media-query(desktop) {
+            width: 218px;
           }
         }
       }
@@ -122,7 +127,7 @@
           cursor: pointer;
           // responsive desktop
           @include media-query(desktop) {
-            width: 30%;
+            width: 27%;
           }
         }
 
@@ -166,6 +171,19 @@
           color: $step-icon-color;
           font-size: 1.1rem;
           transition: color 0.3s ease;
+        }
+        .step__item-content-1::before,
+        .step__item-content-2::before,
+        .step__item-content-3::before {
+          @media screen and (min-width: 1025px) and (max-width: 1250px) {
+            display: block; /* Nécessaire pour que les marges verticales fonctionnent */
+            margin-left: 1rem;
+          }
+        }
+        .step__item-content-2::after {
+          @media screen and (min-width: 1025px) and (max-width: 1250px) {
+            left: -1rem;
+          }
         }
 
         .step__item-content-1::before {
@@ -219,7 +237,7 @@
           }
           // responsive large desktop
           @include media-query(large-desktop) {
-            padding-left: 3rem;
+            padding-left: 3.2rem;
           }
         }
         .restaurants__cards-row {

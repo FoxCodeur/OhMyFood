@@ -180,7 +180,7 @@
     }
     .restaurants__menu-order {
       //mobile first
-      width: 100%;
+      width: 55%;
       @include flex-center;
       .restaurants__menu-order-button {
         //mobile first
@@ -188,7 +188,10 @@
         width: 100%;
         //responsive tablet
         @include media-query(tablet) {
-          width: 30%;
+          width: 45%;
+        }
+        @include media-query(desktop) {
+          width: 186px;
         }
       }
     }

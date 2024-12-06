@@ -530,7 +530,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1024px) {
   .main-container .middle-content {
-    height: 69.69rem;
+    height: 73rem;
   }
 }
 .main-container .middle-content .location {
@@ -609,6 +609,11 @@ lente, qui accélère ensuite, puis ralentie */
     margin: auto;
   }
 }
+@media screen and (min-width: 1024px) {
+  .main-container .middle-content .intro__container .intro__button-container {
+    width: 218px;
+  }
+}
 .main-container .middle-content .step__container {
   display: flex;
   flex-direction: column;
@@ -677,7 +682,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1024px) {
   .main-container .middle-content .step__container .step__buttons .step__item {
-    width: 30%;
+    width: 27%;
   }
 }
 .main-container .middle-content .step__container .step__buttons .step__item-number::before {
@@ -718,6 +723,19 @@ lente, qui accélère ensuite, puis ralentie */
   color: #7e7e7e;
   font-size: 1.1rem;
   transition: color 0.3s ease;
+}
+@media screen and (min-width: 1025px) and (max-width: 1250px) {
+  .main-container .middle-content .step__container .step__buttons .step__item-content-1::before,
+  .main-container .middle-content .step__container .step__buttons .step__item-content-2::before,
+  .main-container .middle-content .step__container .step__buttons .step__item-content-3::before {
+    display: block; /* Nécessaire pour que les marges verticales fonctionnent */
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1250px) {
+  .main-container .middle-content .step__container .step__buttons .step__item-content-2::after {
+    left: -1rem;
+  }
 }
 .main-container .middle-content .step__container .step__buttons .step__item-content-1::before {
   content: "\f3cd";
@@ -768,7 +786,7 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 1280px) {
   .main-container .middle-content .wrapper .restaurants__container .restaurants__title {
-    padding-left: 3rem;
+    padding-left: 3.2rem;
   }
 }
 .main-container .middle-content .wrapper .restaurants__container .restaurants__cards-row {
@@ -1045,7 +1063,7 @@ lente, qui accélère ensuite, puis ralentie */
   transition: padding-right 0.5s ease, opacity 0.5s ease; /* Synchronisation avec les autres éléments */
 }
 .restaurants__main-container .restaurants__main-content .restaurants__menu-order {
-  width: 100%;
+  width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1072,7 +1090,12 @@ lente, qui accélère ensuite, puis ralentie */
 }
 @media screen and (min-width: 768px) {
   .restaurants__main-container .restaurants__main-content .restaurants__menu-order .restaurants__menu-order-button {
-    width: 30%;
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .restaurants__main-container .restaurants__main-content .restaurants__menu-order .restaurants__menu-order-button {
+    width: 186px;
   }
 }
 
