@@ -254,6 +254,11 @@
             width: 78rem;
             margin: auto;
           }
+          // Breakpoint spécifique entre 1025px et 1300px
+          @media (min-width: 1025px) and (max-width: 1300px) {
+            gap: 1rem;
+          }
+
           .restaurants__card {
             width: 100%;
             margin: auto;

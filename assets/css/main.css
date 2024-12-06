@@ -805,6 +805,11 @@ lente, qui accélère ensuite, puis ralentie */
     margin: auto;
   }
 }
+@media (min-width: 1025px) and (max-width: 1300px) {
+  .main-container .middle-content .wrapper .restaurants__container .restaurants__cards-row {
+    gap: 1rem;
+  }
+}
 .main-container .middle-content .wrapper .restaurants__container .restaurants__cards-row .restaurants__card {
   width: 100%;
   margin: auto;
